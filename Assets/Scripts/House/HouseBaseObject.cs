@@ -6,8 +6,8 @@ public class HouseBaseObject : MonoBehaviour {
 
 	// Use this for initialization
 	public virtual void Start () {
-		GameObject playerGameObject = GameObject.Find("Player");
-		playerReference = playerGameObject.GetComponent<Player>();
+		//GameObject playerGameObject = GameObject.Find("Player");
+		playerReference = Player.Instance;
 	}
 	
 	// Update is called once per frame

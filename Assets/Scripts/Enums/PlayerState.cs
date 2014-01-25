@@ -1,9 +1,10 @@
 ﻿public enum PlayerState {
 	None,
-	Standing,
-	Moving,
 	BendingOver,
+	Flashback,
+	InCinematic,
+	Moving,
 	ReachingOut,
 	ReachingUp,
-	Flashback
+	Standing
 }

@@ -95,7 +95,7 @@ public class TargetPathingGameObject : MonoBehaviour {
 		return newPositionOffset;
 	}
 
-	public virtual void SetTargetOjbectAndTargetPosition(GameObject newTargetObject, Vector2 newTargetPosition) {
+	public virtual void SetTargetObjectAndTargetPosition(GameObject newTargetObject, Vector2 newTargetPosition) {
 		targetObject = newTargetObject;
 		targetPosition = newTargetPosition;
 	}
