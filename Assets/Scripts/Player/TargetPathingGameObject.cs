@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 //TO DO: PUT ARRIVAL LOGIC SO YOU CAN DETECT THE SECOND YOU ARRIVE, THEN USE THAT TO HOOK IN LOGIC FOR EACH OBJECT
@@ -95,7 +95,7 @@ public class TargetPathingGameObject : MonoBehaviour {
 		return newPositionOffset;
 	}
 
-	public virtual void SetTargetObjectAndTargetPosition(GameObject newTargetObject, Vector2 newTargetPosition) {
+	public virtual void SetTargetOjbectAndTargetPosition(GameObject newTargetObject, Vector2 newTargetPosition) {
 		targetObject = newTargetObject;
 		targetPosition = newTargetPosition;
 	}
