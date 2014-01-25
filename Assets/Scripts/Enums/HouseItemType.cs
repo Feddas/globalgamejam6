@@ -3,9 +3,12 @@
 	//It's going to get big fast, except for None, that's at the top
 	None,
 	AtticDoor,
+	Car,
 	FirePoker,
 	Floor,
+	FrontDoor,
 	PictureFrame,
 	Pillow1,
-	Pillow2
+	Pillow2,
+	Table
 }
