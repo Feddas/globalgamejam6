@@ -214,7 +214,7 @@ GameObject:
   - 61: {fileID: 507757418}
   - 50: {fileID: 507757420}
   m_Layer: 0
-  m_Name: BedroomDoor
+  m_Name: DoorBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7a512fd277d944a03fb80ab10728d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToChangeTo: LoganDebugScene
+  sceneToChangeTo: Hallway
 --- !u!212 &507757416
 SpriteRenderer:
   m_ObjectHideFlags: 0

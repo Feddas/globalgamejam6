@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 38
+  type: 40
 --- !u!212 &83622458
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 41
+  type: 42
 --- !u!212 &248994041
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 37
+  type: 38
 --- !u!212 &345575376
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7a512fd277d944a03fb80ab10728d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToChangeTo: LoganDebugScene
+  sceneToChangeTo: Hallway
 --- !u!212 &507757416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 582041236}
   m_Layer: 0
-  m_Name: MasterBed
+  m_Name: Masterbed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 43
+  type: 44
 --- !u!212 &916892277
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -933,7 +933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 42
+  type: 43
 --- !u!212 &1594875557
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 40
+  type: 41
 --- !u!1 &1898448747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 36
+  type: 37
 --- !u!61 &1898448751
 BoxCollider2D:
   m_ObjectHideFlags: 0

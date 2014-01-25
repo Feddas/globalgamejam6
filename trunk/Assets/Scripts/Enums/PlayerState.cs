@@ -5,5 +5,5 @@
 	BendingOver,
 	ReachingOut,
 	ReachingUp,
-	Flasback
+	Flashback
 }

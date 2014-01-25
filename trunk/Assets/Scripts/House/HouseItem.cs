@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class HouseItem : HouseBaseObject {
@@ -21,6 +21,6 @@ public class HouseItem : HouseBaseObject {
 		Vector3 mousePosition = Input.mousePosition;
 		Vector3 worldPosition = Camera.main.camera.ScreenToWorldPoint(mousePosition);
 
-		playerReference.SetTargetOjbectAndTargetPosition(this.gameObject, worldPosition);
+		playerReference.SetTargetObjectAndTargetPosition(this.gameObject, worldPosition);
 	}
 }
