@@ -138,7 +138,7 @@ GameObject:
   - 61: {fileID: 114863711}
   - 50: {fileID: 114863710}
   m_Layer: 0
-  m_Name: DoorSistersRoom
+  m_Name: DoorBedroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7a512fd277d944a03fb80ab10728d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToChangeTo: LoganDebugScene
+  sceneToChangeTo: Bedroom
 --- !u!212 &114863714
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ GameObject:
   - 61: {fileID: 507757418}
   - 50: {fileID: 507757420}
   m_Layer: 0
-  m_Name: Attic Stairs
+  m_Name: DoorAttic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7a512fd277d944a03fb80ab10728d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToChangeTo: LoganDebugScene
+  sceneToChangeTo: Attic
 --- !u!212 &507757416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 4
+  type: 28
 --- !u!50 &507757420
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7a512fd277d944a03fb80ab10728d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToChangeTo: LoganDebugScene
+  sceneToChangeTo: Masterbed
 --- !u!212 &594174344
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -995,12 +995,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 1840913791}
   - 212: {fileID: 1840913796}
-  - 114: {fileID: 1840913795}
   - 114: {fileID: 1840913794}
   - 61: {fileID: 1840913793}
   - 50: {fileID: 1840913792}
   m_Layer: 0
-  m_Name: DoorBathroom
+  m_Name: DoorLockedBathroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1055,19 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 5
---- !u!114 &1840913795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1840913790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13c7a512fd277d944a03fb80ab10728d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToChangeTo: LoganDebugScene
+  type: 35
 --- !u!212 &1840913796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1105,7 +1092,7 @@ GameObject:
   - 61: {fileID: 1896821344}
   - 50: {fileID: 1896821343}
   m_Layer: 0
-  m_Name: DoorFoyer
+  m_Name: DoorStairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1149,7 +1136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 5
+  type: 33
 --- !u!114 &1896821346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1161,7 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7a512fd277d944a03fb80ab10728d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToChangeTo: LoganDebugScene
+  sceneToChangeTo: Foyer
 --- !u!212 &1896821347
 SpriteRenderer:
   m_ObjectHideFlags: 0

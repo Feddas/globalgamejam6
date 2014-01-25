@@ -25,7 +25,7 @@ public class Player : TargetPathingGameObject {
 		}
 	}
 
-	public override void SetTargetOjbectAndTargetPosition(GameObject newTargetObject, Vector2 newTargetPosition) {
+	public override void SetTargetObjectAndTargetPosition(GameObject newTargetObject, Vector2 newTargetPosition) {
 		arrivedAtTargetPosition = false;
 		targetObject = newTargetObject;
 		targetPosition = newTargetPosition;
