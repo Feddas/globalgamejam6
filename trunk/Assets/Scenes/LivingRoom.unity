@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 194286035}
   m_Layer: 0
-  m_Name: EntryRoom
+  m_Name: LivingRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +253,7 @@ GameObject:
   - 61: {fileID: 507757418}
   - 50: {fileID: 507757420}
   m_Layer: 0
-  m_Name: FrontDoor
+  m_Name: DoorFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,7 +388,7 @@ GameObject:
   - 61: {fileID: 594174341}
   - 50: {fileID: 594174340}
   m_Layer: 0
-  m_Name: KitchenDoor
+  m_Name: DoorKitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
