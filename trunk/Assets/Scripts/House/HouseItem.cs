@@ -25,9 +25,10 @@ public class HouseItem : HouseBaseObject {
 			debugText = this.gameObject.name + " was clicked.";
 		}
 		if (debugText != TextLibrary.CompletedDialog)
+		{
 			Debug.Log(debugText);
-		Debug.Log(TextLibrary.Instance.GetTextFor(type));
-		showText(debugText);
+			showText(debugText);
+		}
 
 		Vector3 mousePosition = Input.mousePosition;
 		Vector3 worldPosition = Camera.main.camera.ScreenToWorldPoint(mousePosition);
