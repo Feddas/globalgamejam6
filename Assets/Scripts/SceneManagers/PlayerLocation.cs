@@ -30,15 +30,15 @@ public class PlayerLocation
 	private PlayerLocation() {
 		addSpawnLocation(Room.Hallway, Room.Attic, -2.5f, -3f);
 		addSpawnLocation(Room.Hallway, Room.Masterbed, -4.4f, -3.6f);
-		addSpawnLocation(Room.Hallway, Room.Bedroom, 6.2f, -3f);
+		addSpawnLocation(Room.Hallway, Room.Bedroom, 3.6f, -3f);
 
 		const float yMaxBound = -4.9f;
 		maxBounds = new Dictionary<Room, Vector2>();
 		maxBounds.Add(Room.Attic, new Vector2(6.5f, yMaxBound));
-		maxBounds.Add(Room.Bedroom, new Vector2(8.6f, yMaxBound));
+		maxBounds.Add(Room.Bedroom, new Vector2(5.5f, yMaxBound));
 		maxBounds.Add(Room.Foyer, new Vector2(5.69f, yMaxBound));
 		maxBounds.Add(Room.FrontHouse, new Vector2(6.5f, yMaxBound));
-		maxBounds.Add(Room.Hallway, new Vector2(6.5f, yMaxBound));
+		maxBounds.Add(Room.Hallway, new Vector2(5.3f, yMaxBound));
 		maxBounds.Add(Room.LivingRoom, new Vector2(5.2f, yMaxBound));
 		maxBounds.Add(Room.Masterbed, new Vector2(6.8f, yMaxBound));
 	}
