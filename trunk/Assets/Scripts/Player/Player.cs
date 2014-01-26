@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class Player : TargetPathingGameObject {
 	public bool arrivedAtTargetPosition = false;
 	public PlayerState currentState = PlayerState.None;
-	
+	public Animator animatorReference = null;	
 	private Dictionary<HouseItemType, int> itemInteractions = new Dictionary<HouseItemType, int>();
 	#region Singleton Declaration
 	//------------------------------------------------------ 
@@ -38,13 +38,28 @@ public class Player : TargetPathingGameObject {
 	#endregion //------------------------------------------------------
 
 //	// Use this for initialization
-//	public override void Start () {
-//	}
+	public override void Start () {
+		animatorReference = this.gameObject.GetComponent<Animator>();
+	}
 
 	// Update is called once per frame
 	public override void Update () {
 		base.Update();
 		PerformPlayerLogic();
+		PerformAnimatorUpdate();
+	}
+
+	public void PerformAnimatorUpdate() {
+		animatorReference.SetBool(PlayerState.None.ToString(), false);
+		animatorReference.SetBool(PlayerState.BendingOver.ToString(), false);
+		animatorReference.SetBool(PlayerState.Flashback.ToString(), false);
+		animatorReference.SetBool(PlayerState.InCinematic.ToString(), false);
+		animatorReference.SetBool(PlayerState.Moving.ToString(), false);
+		animatorReference.SetBool(PlayerState.ReachingOut.ToString(), false);
+		animatorReference.SetBool(PlayerState.ReachingUp.ToString(), false);
+		animatorReference.SetBool(PlayerState.Standing.ToString(), false);
+		//Debug.Log(currentState.ToString());
+		animatorReference.SetBool(currentState.ToString(), true);
 	}
 
 	public void UpdatePlayerLocation(Room fromRoom, Room toRoom)
