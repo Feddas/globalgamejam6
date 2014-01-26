@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Player : TargetPathingGameObject {
 	public bool arrivedAtTargetPosition = false;
 	public PlayerState currentState = PlayerState.None;
 	
+	private Dictionary<HouseItemType, int> itemInteractions = new Dictionary<HouseItemType, int>();
 	//------------------------------------------------------
 	//Beginning of Singleton Declaration
 	//------------------------------------------------------
@@ -111,5 +113,21 @@ public class Player : TargetPathingGameObject {
 
 	public void SetPlayerCurrentState(PlayerState newPlayerState) {
 		currentState = newPlayerState;
+	}
+
+	public int GetItemState(HouseItemType targetItem)
+	{
+		if (itemInteractions.ContainsKey(targetItem) == false)
+			return 0;
+		else
+			return itemInteractions[targetItem];
+	}
+
+	public void IncrementItemState(HouseItemType targetItem)
+	{
+		if (itemInteractions.ContainsKey(targetItem) == false)
+			itemInteractions.Add(targetItem, 1);
+		else
+			itemInteractions[targetItem]++;
 	}
 }
