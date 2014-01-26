@@ -112,7 +112,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 4054371741
   m_Sprite: {fileID: 21300000, guid: cff90cc7a9486f34eaf20c71306a768d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
 --- !u!4 &8426354
 Transform:
   m_ObjectHideFlags: 0
@@ -225,9 +225,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2122962519}
   - {fileID: 1148324649}
   - {fileID: 1475475412}
-  - {fileID: 1898448749}
   - {fileID: 1409710207}
   - {fileID: 921162916}
   - {fileID: 507757417}
@@ -297,6 +297,7 @@ GameObject:
   - 114: {fileID: 507757419}
   - 61: {fileID: 507757418}
   - 50: {fileID: 507757420}
+  - 82: {fileID: 507757421}
   m_Layer: 0
   m_Name: DoorLivingroom
   m_TagString: Untagged
@@ -339,7 +340,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 2279694761
   m_Sprite: {fileID: 21300000, guid: cff90cc7a9486f34eaf20c71306a768d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: .164705887}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
 --- !u!4 &507757417
 Transform:
   m_ObjectHideFlags: 0
@@ -390,6 +391,64 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!82 &507757421
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 507757414}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 78398f4f8a349a9419662a036f72cd31, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &594113746
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +696,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 4054371741
   m_Sprite: {fileID: 21300000, guid: cff90cc7a9486f34eaf20c71306a768d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &766271919
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,6 +1017,7 @@ GameObject:
   - 114: {fileID: 1078227110}
   - 61: {fileID: 1078227109}
   - 50: {fileID: 1078227108}
+  - 82: {fileID: 1078227113}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1051,6 +1111,65 @@ Transform:
   m_Children:
   - {fileID: 371716419}
   m_Father: {fileID: 0}
+--- !u!82 &1078227113
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 4eb314feda83f184da6e06f14ba3df6e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1608063324}
+  m_GameObject: {fileID: 1078227107}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 4b35cc7f2c6b8964ca382f00a4b45225, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1148324648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,9 +1245,9 @@ Transform:
   m_LocalPosition: {x: .200419605, y: -1.97441518, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1898448749}
   - {fileID: 981944750}
   - {fileID: 766271920}
-  - {fileID: 2122962519}
   - {fileID: 594174339}
   - {fileID: 103425357}
   - {fileID: 1491684065}
@@ -1531,7 +1650,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 4054371741
   m_Sprite: {fileID: 21300000, guid: cff90cc7a9486f34eaf20c71306a768d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &1741971869
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1700,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_SortingLayerID: 4054371741
   m_Sprite: {fileID: 21300000, guid: cff90cc7a9486f34eaf20c71306a768d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &1898448747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,10 +1749,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1898448747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.343708, y: -2.14842105, z: 0}
+  m_LocalPosition: {x: 10.1432886, y: -.174005866, z: 0}
   m_LocalScale: {x: 1.5, y: 2.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 194286035}
+  m_Father: {fileID: 1204981559}
 --- !u!114 &1898448750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,11 +1801,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2122962518}
-  m_LocalRotation: {x: 0, y: 0, z: .909562767, w: .415566534}
-  m_LocalPosition: {x: -4.73000002, y: -1.85000002, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .0608743317, w: .998145461}
+  m_LocalPosition: {x: -6.19999981, y: -2.93000007, z: 0}
   m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children: []
-  m_Father: {fileID: 1204981559}
+  m_Father: {fileID: 194286035}
 --- !u!61 &2122962520
 BoxCollider2D:
   m_ObjectHideFlags: 0
