@@ -12,4 +12,14 @@ public class HouseCarryItem : HouseBaseObject {
 	public override void Update () {
 		base.Update();
 	}
+
+	public void OnMouseDown() {
+		//Debug.Log(this.gameObject.name + " was clicked.");
+		
+		Vector3 mousePosition = Input.mousePosition;
+		Vector3 worldPosition = Camera.main.camera.ScreenToWorldPoint(mousePosition);
+		
+		//Debug.Log("calling player set target from house item");
+		playerReference.SetTargetObjectAndTargetPosition(this.gameObject, worldPosition);
+	}
 }
