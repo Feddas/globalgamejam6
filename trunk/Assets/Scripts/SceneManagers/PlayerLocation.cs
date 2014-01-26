@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class PlayerLocation
 {
 	Dictionary<Tuple<Room, Room>, Vector2> spawnLocations = new Dictionary<Tuple<Room, Room>, Vector2>();
-	Dictionary<Tuple<Room, Room>, Vector2> maxBounds = new Dictionary<Tuple<Room, Room>, Vector2>();
+	Dictionary<Room, Vector2> maxBounds = new Dictionary<Room, Vector2>();
 
 	private static volatile PlayerLocation _instance;
 	private static object _lock = new object();
@@ -31,6 +31,16 @@ public class PlayerLocation
 		addSpawnLocation(Room.Hallway, Room.Attic, -2.5f, -3f);
 		addSpawnLocation(Room.Hallway, Room.Masterbed, -4.4f, -3.6f);
 		addSpawnLocation(Room.Hallway, Room.Bedroom, 6.2f, -3f);
+
+		const float yMaxBound = -4.9f;
+		maxBounds = new Dictionary<Room, Vector2>();
+		maxBounds.Add(Room.Attic, new Vector2(6.5f, yMaxBound));
+		maxBounds.Add(Room.Bedroom, new Vector2(8.6f, yMaxBound));
+		maxBounds.Add(Room.Foyer, new Vector2(5.69f, yMaxBound));
+		maxBounds.Add(Room.FrontHouse, new Vector2(6.5f, yMaxBound));
+		maxBounds.Add(Room.Hallway, new Vector2(6.5f, yMaxBound));
+		maxBounds.Add(Room.LivingRoom, new Vector2(5.2f, yMaxBound));
+		maxBounds.Add(Room.Masterbed, new Vector2(6.8f, yMaxBound));
 	}
 
 	private void addSpawnLocation(Room fromRoom, Room toRoom, float x, float y)
@@ -50,30 +60,9 @@ public class PlayerLocation
 
 	public Vector2 GetMaxBoundsInScene(Room targetRoom)
 	{
-		Vector2 result = new Vector2(3.6f, -4.9f);
-
-		switch (targetRoom)
-		{
-		case Room.Attic:
-		case Room.Foyer:
-		case Room.Hallway:
-		case Room.LivingRoom:
-			result.x = 6.5f;
-			break;
-			
-		case Room.Bedroom:
-			result.x = 8.6f;
-			break;
-		case Room.Masterbed:
-			result.x = 6.8f;
-			break;
-			
-			//everything else
-		default:
-			result.x = 3.6f;
-			break;
-		}
-
-		return result;
+		if (maxBounds.ContainsKey(targetRoom))
+			return maxBounds[targetRoom];
+		else
+			return new Vector2(3.6f, -4.9f);
 	}
 }
