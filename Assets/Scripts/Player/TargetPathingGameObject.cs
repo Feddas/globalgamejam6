@@ -33,6 +33,7 @@ public class TargetPathingGameObject : MonoBehaviour {
 
 	public void PerformMovementLogic() {
 		Vector2 nextMoveStepSize = CalculateNextMovementStep();
+		nextMoveStepSize = nextMoveStepSize * Time.deltaTime;
 		nextMoveStepSize = PerformTargetPositionLocking(nextMoveStepSize);
 		Vector3 nextWorldPosition = this.gameObject.transform.position + (new Vector3(nextMoveStepSize.x, nextMoveStepSize.y, this.gameObject.transform.position.z));
 
