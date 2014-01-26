@@ -116,13 +116,14 @@ MonoBehaviour:
   maxWorldXBounding: 10
   minWorldYBounding: -2
   maxWorldYBounding: -4.9000001
-  xMovementSpeed: 1
+  xMovementSpeed: 1.5
   yMovementSpeed: 1
   targetPositionXLockBuffer: .0500000007
   targetPositionYLockBuffer: .0500000007
   arrivedAtTargetPosition: 0
   currentState: 0
   animatorReference: {fileID: 0}
+  facing: 0
 --- !u!212 &21200002
 SpriteRenderer:
   m_ObjectHideFlags: 1
