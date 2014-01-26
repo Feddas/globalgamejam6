@@ -22,6 +22,8 @@ public class HouseItem : HouseBaseObject {
 		Vector3 worldPosition = Camera.main.camera.ScreenToWorldPoint(mousePosition);
 
 		//Debug.Log("calling player set target from house item");
-		playerReference.SetTargetObjectAndTargetPosition(this.gameObject, worldPosition);
+		if(playerReference.currentState != PlayerState.InCinematic) {
+			playerReference.SetTargetObjectAndTargetPosition(this.gameObject, worldPosition);
+		}
 	}
 }

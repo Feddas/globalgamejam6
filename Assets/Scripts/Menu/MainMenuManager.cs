@@ -10,6 +10,12 @@ public class MainMenuManager : MonoBehaviour {
 		//if(Player.Instance == false) {
 		//}
 		Player.Instance.currentState = PlayerState.InCinematic;
+		GameObject cinematicToPerformGameObject = new GameObject("Cinematic");
+		cinematicToPerformGameObject.AddComponent<StartGameCinematic>();
+		Player.Instance.cinematicToPerform = cinematicToPerformGameObject;
+		//Keeps it alive so the player's cinematic isn't destroyed
+		DontDestroyOnLoad(cinematicToPerformGameObject);
+
 		//Debug.Log(Player.Instance.currentState);
 		Application.LoadLevel("FrontHouse");
 	}

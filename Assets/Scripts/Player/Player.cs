@@ -11,6 +11,8 @@ public class Player : TargetPathingGameObject {
 
 	public DirectionFacing facing = DirectionFacing.Left;
 
+	public GameObject cinematicToPerform = null;
+
 	#region Singleton Declaration
 	//------------------------------------------------------ 
 	//Beginning of Singleton Declaration
@@ -95,7 +97,16 @@ public class Player : TargetPathingGameObject {
 				PerformPlayerArrivalLogic();
 			break;
 		}
+
+		if(cinematicToPerform != null
+		   && currentState!= PlayerState.InCinematic) {
+			Destroy(cinematicToPerform);
+		}
 	}
+
+	public void PerformCinematicLogic() {
+	}
+
 	public void PerformPlayerArrivalLogic() {
 		if(this.gameObject.transform.position.x == targetPosition.x
 		   && this.gameObject.transform.position.y == targetPosition.y) {
