@@ -39,28 +39,32 @@ public class TargetPathingGameObject : MonoBehaviour {
 		//Not super accurate but does the job
 		float widthOffset = (this.gameObject.transform.localScale.x/2);
 		float heightOffset = (this.gameObject.transform.localScale.y/2);
+
+		float centerXOffset = this.gameObject.GetComponent<BoxCollider2D>().center.x;
+		float centerYOffset = this.gameObject.GetComponent<BoxCollider2D>().center.y;
+
 		//Debug.Log("Current Position: " + this.gameObject.transform.position);
 		//Debug.Log("Next Position: " + nextWorldPosition);
 		//Debug.Log("Next Position With X Bound: " + (nextWorldPosition.x + this.gameObject.transform.localScale.x/2);
 		//Debug.Log(this.gameObject.transform.localScale.x/2);
 		if(useWorldBoundings) {
 			//Left X
-			if((nextWorldPosition.x - widthOffset) < minWorldXBounding) {
-				nextWorldPosition.x = (minWorldXBounding + widthOffset);
+			if(((nextWorldPosition.x - widthOffset) + centerXOffset) < minWorldXBounding) {
+				nextWorldPosition.x = (minWorldXBounding + widthOffset) + centerXOffset;
 			}
 			//Right X
-			else if((nextWorldPosition.x + widthOffset) > maxWorldXBounding) {
-				nextWorldPosition.x = (maxWorldXBounding -	 widthOffset);;
+			else if(((nextWorldPosition.x + widthOffset) + centerXOffset) > maxWorldXBounding) {
+				nextWorldPosition.x = (maxWorldXBounding -	 widthOffset) - centerXOffset;
 			}
 
 			//Top Y
-			if((nextWorldPosition.y + heightOffset) > minWorldYBounding) {
-				nextWorldPosition.y = (minWorldYBounding - heightOffset);
+			if(((nextWorldPosition.y + heightOffset) + centerYOffset) > minWorldYBounding) {
+				nextWorldPosition.y = (minWorldYBounding - heightOffset) - centerYOffset;
 				//Debug.Log("Min World Y bounding reset");
 			}
 			//Bottom Y
-			else if((nextWorldPosition.y - heightOffset) < maxWorldYBounding) {
-				nextWorldPosition.y = (maxWorldYBounding + heightOffset);
+			else if(((nextWorldPosition.y - heightOffset) + centerYOffset) < maxWorldYBounding) {
+				nextWorldPosition.y = (maxWorldYBounding + heightOffset) - centerYOffset;
 				//Debug.Log("Max World Y bounding reset");
 			}
 		}
