@@ -4,7 +4,7 @@
 	Flashback,
 	InCinematic,
 	Moving,
-	ReachingOut,
+	ReachingForward,
 	ReachingUp,
 	Standing
 }
