@@ -13,6 +13,32 @@ public class HouseCarryItem : HouseBaseObject {
 	// Use this for initialization
 	public override void Start () {
 		base.Start();
+		switch(type) {
+		case(HouseItemType.LivingroomFirePoker):
+			if(Player.Instance.firePoker == CarriedItemsState.Carrying
+			   || Player.Instance.firePoker == CarriedItemsState.Used) {
+				Destroy(this.gameObject);
+			}
+			break;
+		case(HouseItemType.MasterbedMirrorShard):
+			if(Player.Instance.mirrorShard == CarriedItemsState.Carrying
+			   || Player.Instance.mirrorShard == CarriedItemsState.Used) {
+				Destroy(this.gameObject);
+			}
+			break;
+		case(HouseItemType.MasterbedPillow1):
+			if(Player.Instance.pillow1 == CarriedItemsState.Carrying
+			   || Player.Instance.pillow1 == CarriedItemsState.Used) {
+				Destroy(this.gameObject);
+			}
+			break;
+		case(HouseItemType.MasterbedPillow2):
+			if(Player.Instance.pillow2 == CarriedItemsState.Carrying
+			   || Player.Instance.pillow2 == CarriedItemsState.Used) {
+				Destroy(this.gameObject);
+			}
+			break;
+		}
 	}
 	
 	// Update is called once per frame

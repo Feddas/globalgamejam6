@@ -16,10 +16,11 @@ public class Player : TargetPathingGameObject {
 	//------------------------------------------------------
 	//These are all the items the player can pick up
 	//------------------------------------------------------
-	public GameObject firePoker = null;
-	public GameObject mirrorShard = null;
-	public GameObject pillow1 = null;
-	public GameObject pillow2 = null;
+	public CarriedItemsState firePoker = CarriedItemsState.NotPickedUp;
+	public CarriedItemsState mirrorShard = CarriedItemsState.NotPickedUp;
+	public CarriedItemsState pillow1 = CarriedItemsState.NotPickedUp;
+	public CarriedItemsState pillow2 = CarriedItemsState.NotPickedUp;
+	public CarriedItemsState urn = CarriedItemsState.NotPickedUp;
 
 	//------------------------------------------------------
 	#region Singleton Declaration
@@ -40,7 +41,6 @@ public class Player : TargetPathingGameObject {
 				lock(_lock) {
 					if (_instance == null) 
 						_instance = ((GameObject)GameObject.Instantiate(Resources.Load("Prefabs/Player") as GameObject)).GetComponent<Player>();
-						DontDestroyOnLoad(Player.Instance.gameObject);
 				}
 			}
 			return _instance;
@@ -51,6 +51,10 @@ public class Player : TargetPathingGameObject {
 	}
 	//End of Singleton Declaration
 	#endregion //------------------------------------------------------
+
+	public override void Awake() {
+		DontDestroyOnLoad(this.gameObject);
+	}
 
 //	// Use this for initialization
 	public override void Start () {
@@ -126,43 +130,74 @@ public class Player : TargetPathingGameObject {
 			//Debug.Log("Arrived in position");
 			if(!arrivedAtTargetPosition) {
 				arrivedAtTargetPosition = true;
+				PerformPlayerArrivalHouseItemCheck();
 				PerformPlayerArrivalCarryItemPickupCheck();
 				currentState = PlayerState.Standing;
 			}
 		}
 	}
 
-	public void PerformPlayerArrivalCarryItemPickupCheck() {
-		HouseCarryItem houseCarryItemObjectReference = targetObject.GetComponent<HouseCarryItem>();
+	public void PerformPlayerArrivalHouseItemCheck() {
+		Debug.Log("Performing Player Arrival House Item Check");
+		
+		if(targetObject != null) {
+			Debug.Log("Target Object: " + targetObject.name);
+			HouseItem houseItemReference = targetObject.GetComponent<HouseItem>();
+			if(houseItemReference != null) {
+				Debug.Log("House item detected");
+				Debug.Log("House Type: " + houseItemReference.type);
+				
+				if(houseItemReference.type == HouseItemType.LivingroomFireplaceMantle) {
+					if(Player.Instance.urn == CarriedItemsState.Carrying) {
+						Instantiate(Resources.Load("Prefabs/Urn") as GameObject);
+						Player.Instance.urn = CarriedItemsState.Used;
+					}
+				}
+			}
+		}
+	}
 
+	public void PerformPlayerArrivalCarryItemPickupCheck() {
 		Debug.Log("Performing Player Arrival Carry Item Pickup Check");
 
 		if(targetObject != null) {
 			Debug.Log("Target Object: " + targetObject.name);
+			HouseCarryItem houseCarryItemObjectReference = targetObject.GetComponent<HouseCarryItem>();
 			if(houseCarryItemObjectReference != null) {
 				Debug.Log("House carry item detected");
 				Debug.Log("House Carry Type: " + houseCarryItemObjectReference.type);
 
-				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedPillow1) {
+				if(houseCarryItemObjectReference.type == HouseItemType.LivingroomFirePoker) {
+					Debug.Log("Fire poker picked up.");
 					targetObject.SetActive(false);
-					Player.Instance.pillow1 = targetObject;
-					Player.Instance.mirrorShard.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
-					DontDestroyOnLoad(Player.Instance.pillow1);
-					DontDestroyOnLoad(Player.Instance.targetObject);
+					Player.Instance.firePoker = CarriedItemsState.Carrying;
+//					Player.Instance.firePoker.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
+//					DontDestroyOnLoad(Player.Instance.firePoker);
+//					DontDestroyOnLoad(Player.Instance.targetObject);
+				}
+				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedPillow1) {
+					Debug.Log("Master bed pillow 1 picked up.");
+					targetObject.SetActive(false);
+					Player.Instance.pillow1 = CarriedItemsState.Carrying;
+//					Player.Instance.pillow1.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
+//					DontDestroyOnLoad(Player.Instance.pillow1);
+//					DontDestroyOnLoad(Player.Instance.targetObject);
 				}
 				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedPillow2) {
+					Debug.Log("Master bed pillow 2 picked up.");
 					targetObject.SetActive(false);
-					Player.Instance.pillow2 = targetObject;
-					Player.Instance.mirrorShard.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
-					DontDestroyOnLoad(Player.Instance.pillow2);
-					DontDestroyOnLoad(Player.Instance.targetObject);
+					Player.Instance.pillow2 = CarriedItemsState.Carrying;
+//					Player.Instance.pillow2.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
+//					DontDestroyOnLoad(Player.Instance.pillow2);
+//					DontDestroyOnLoad(Player.Instance.targetObject);
 				}
 				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedMirrorShard) {
+					Debug.Log("Master bed mirror shard picked up.");
 					targetObject.SetActive(false);
-					Player.Instance.mirrorShard = targetObject;
-					Player.Instance.mirrorShard.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
-					DontDestroyOnLoad(Player.Instance.mirrorShard);
-					DontDestroyOnLoad(Player.Instance.targetObject);
+					Player.Instance.mirrorShard = CarriedItemsState.Carrying;
+//					Player.Instance.mirrorShard.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
+//					DontDestroyOnLoad(Player.Instance.mirrorShard);
+//					DontDestroyOnLoad(Player.Instance.targetObject);
 				}
 			}
 		}

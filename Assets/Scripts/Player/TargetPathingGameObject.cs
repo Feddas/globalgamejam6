@@ -19,6 +19,10 @@ public class TargetPathingGameObject : MonoBehaviour {
 	public float targetPositionXLockBuffer = 0;
 	public float targetPositionYLockBuffer = 0;
 
+	public virtual void Awake() {
+		DontDestroyOnLoad(this.gameObject);
+	}
+
 	// Use this for initialization
 	public virtual void Start () {
 	
