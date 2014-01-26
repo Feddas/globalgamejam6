@@ -286,8 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c7a512fd277d944a03fb80ab10728d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentScene: 0
-  sceneToChangeTo: 0
+  currentScene: 4
+  sceneToChangeTo: 3
 --- !u!212 &507757416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 5
+  type: 30
 --- !u!50 &507757420
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -505,7 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 3
+  type: 34
 --- !u!61 &921162918
 BoxCollider2D:
   m_ObjectHideFlags: 0
