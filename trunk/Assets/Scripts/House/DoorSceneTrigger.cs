@@ -18,6 +18,8 @@ public class DoorSceneTrigger : MonoBehaviour {
 		if(otherCollider.gameObject.GetComponent<Player>() != null) {
 			if(!sceneToChangeTo.Equals(string.Empty)) {
 				Player.Instance.UpdatePlayerLocation(currentScene, sceneToChangeTo);
+				if(audio)
+					audio.Play();
 				Application.LoadLevel(sceneToChangeTo.ToString());
 			}
 		}
