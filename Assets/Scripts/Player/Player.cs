@@ -5,8 +5,12 @@ using System.Collections.Generic;
 public class Player : TargetPathingGameObject {
 	public bool arrivedAtTargetPosition = false;
 	public PlayerState currentState = PlayerState.None;
+
 	public Animator animatorReference = null;	
 	private Dictionary<HouseItemType, int> itemInteractions = new Dictionary<HouseItemType, int>();
+
+	public DirectionFacing facing = DirectionFacing.Left;
+
 	#region Singleton Declaration
 	//------------------------------------------------------ 
 	//Beginning of Singleton Declaration
@@ -126,13 +130,41 @@ public class Player : TargetPathingGameObject {
 			else if((newTargetPosition.y - heightOffset) < maxWorldYBounding) {
 				newTargetPosition.y = (maxWorldYBounding + heightOffset);
 			}
-	
 		}
 
 		currentState = PlayerState.Moving;
 		arrivedAtTargetPosition = false;
 		targetObject = newTargetObject;
 		targetPosition = newTargetPosition;
+
+		OrientLocalScaleToMatchPlayerFacing();
+	}
+
+	public void OrientLocalScaleToMatchPlayerFacing() {
+		//This configures the player's facing
+		if(targetPosition.x < this.gameObject.transform.position.x) {
+			facing = DirectionFacing.Left;
+		}
+		else if(targetPosition.x > this.gameObject.transform.position.x) {
+			facing = DirectionFacing.Right;
+		}
+
+		//Debug.Log("Entered OrientLocalScaleToMatchPlayerFacing Method");
+		//Debug.Log("Current Facing is: " + facing.ToString());
+		if(facing == DirectionFacing.Left) {
+			if(this.gameObject.transform.localScale.x < 0) {
+				this.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x * -1,
+				                                                   this.gameObject.transform.localScale.y,
+				                                                   this.gameObject.transform.localScale.z);
+			}
+		}
+		else if(facing == DirectionFacing.Right) {
+			if(this.gameObject.transform.localScale.x > 0) {
+				this.gameObject.transform.localScale = new Vector3(this.gameObject.transform.localScale.x * -1,
+				                                                   this.gameObject.transform.localScale.y,
+				                                                   this.gameObject.transform.localScale.z);
+			}
+		}
 	}
 
 	public void SetPlayerCurrentState(PlayerState newPlayerState) {

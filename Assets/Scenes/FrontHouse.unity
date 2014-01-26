@@ -733,6 +733,7 @@ MonoBehaviour:
   arrivedAtTargetPosition: 0
   currentState: 0
   animatorReference: {fileID: 0}
+  facing: 0
 --- !u!95 &1521016639
 Animator:
   serializedVersion: 2
