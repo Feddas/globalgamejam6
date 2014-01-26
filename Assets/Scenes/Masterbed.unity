@@ -209,8 +209,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 248994038}
   - 212: {fileID: 248994041}
-  - 114: {fileID: 248994040}
   - 61: {fileID: 248994039}
+  - 114: {fileID: 248994040}
   m_Layer: 0
   m_Name: MasterbedPillow2
   m_TagString: Untagged
@@ -248,11 +248,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 248994037}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
+  m_Script: {fileID: 11500000, guid: b910339037378264f96b4a0531886594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
   type: 42
+  state: 0
 --- !u!212 &248994041
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -272,7 +273,7 @@ SpriteRenderer:
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_SortingLayerID: 4054371741
   m_Sprite: {fileID: 21300000, guid: 2b3abd1a1dfb5514d8962c884d97361a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1068,8 +1069,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1855687677}
   - 212: {fileID: 1855687676}
-  - 114: {fileID: 1855687679}
   - 61: {fileID: 1855687678}
+  - 114: {fileID: 1855687679}
   m_Layer: 0
   m_Name: MasterbedPillow1
   m_TagString: Untagged
@@ -1130,11 +1131,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1855687675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
+  m_Script: {fileID: 11500000, guid: b910339037378264f96b4a0531886594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
   type: 41
+  state: 0
 --- !u!1 &1898448747
 GameObject:
   m_ObjectHideFlags: 0

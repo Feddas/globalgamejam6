@@ -16,7 +16,7 @@ public class HouseCarryItem : HouseBaseObject {
 		base.Update();
 	}
 
-	public void OnMouseDown() {
+	public virtual void OnMouseDown() {
 		//Debug.Log(this.gameObject.name + " was clicked.");
 		
 		Vector3 mousePosition = Input.mousePosition;
