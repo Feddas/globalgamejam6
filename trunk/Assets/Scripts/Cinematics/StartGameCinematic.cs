@@ -6,10 +6,10 @@ public class StartGameCinematic : BaseCinematic {
 
 	public bool displayTextAreaText = false;
 
-	public int textboxWidth = 1024;
-	public int textboxHeight = 100;
-	public int screenWidth = 1024;
-	public int screenHeight = 599;
+	public const int textboxWidth = 1024;
+	public const int textboxHeight = 100;
+	public const int screenWidth = 1024;
+	public const int screenHeight = 599;
 
 	public string textBoxText = "The quick brown fox jumped over the log";
 
