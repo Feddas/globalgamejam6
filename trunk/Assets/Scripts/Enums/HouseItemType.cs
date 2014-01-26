@@ -46,4 +46,5 @@
 	MasterbedPillow2,
 	MasterbedRug,
 	MasterbedWindow,
+	Urn,
 }

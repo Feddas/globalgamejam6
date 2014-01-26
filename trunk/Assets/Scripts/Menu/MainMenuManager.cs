@@ -25,6 +25,8 @@ public class MainMenuManager : MonoBehaviour {
 			Player.Instance.cinematicToPerform = cinematicToPerformGameObject;
 			Player.Instance.transform.position = new Vector3(3.05f, -3, Player.Instance.transform.position.z);
 			Player.Instance.targetPosition = new Vector2(3.05f, -3);
+			Player.Instance.urn = CarriedItemsState.Carrying;
+
 			//Keeps it alive so the player's cinematic isn't destroyed
 			DontDestroyOnLoad(cinematicToPerformGameObject);
 			

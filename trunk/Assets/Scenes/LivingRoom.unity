@@ -1081,9 +1081,11 @@ MonoBehaviour:
   animatorReference: {fileID: 0}
   facing: 0
   cinematicToPerform: {fileID: 0}
-  firePoker: {fileID: 0}
-  pillow1: {fileID: 0}
-  pillow2: {fileID: 0}
+  firePoker: 0
+  mirrorShard: 0
+  pillow1: 0
+  pillow2: 0
+  urn: 0
 --- !u!95 &1078227111
 Animator:
   serializedVersion: 2
@@ -1786,8 +1788,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 2122962519}
   - 212: {fileID: 2122962522}
-  - 114: {fileID: 2122962521}
   - 61: {fileID: 2122962520}
+  - 114: {fileID: 2122962521}
   m_Layer: 0
   m_Name: FirePoker
   m_TagString: Untagged
@@ -1825,11 +1827,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2122962518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
+  m_Script: {fileID: 11500000, guid: b910339037378264f96b4a0531886594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 2
+  type: 17
+  state: 0
 --- !u!212 &2122962522
 SpriteRenderer:
   m_ObjectHideFlags: 0
