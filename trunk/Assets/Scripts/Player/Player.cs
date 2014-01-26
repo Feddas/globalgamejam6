@@ -59,7 +59,7 @@ public class Player : TargetPathingGameObject {
 		animatorReference.SetBool(PlayerState.Flashback.ToString(), false);
 		animatorReference.SetBool(PlayerState.InCinematic.ToString(), false);
 		animatorReference.SetBool(PlayerState.Moving.ToString(), false);
-		animatorReference.SetBool(PlayerState.ReachingOut.ToString(), false);
+		animatorReference.SetBool(PlayerState.ReachingForward.ToString(), false);
 		animatorReference.SetBool(PlayerState.ReachingUp.ToString(), false);
 		animatorReference.SetBool(PlayerState.Standing.ToString(), false);
 		//Debug.Log(currentState.ToString());
@@ -87,7 +87,7 @@ public class Player : TargetPathingGameObject {
 			case(PlayerState.Moving):
 				PerformPlayerArrivalLogic();
 			break;
-			case(PlayerState.ReachingOut):
+			case(PlayerState.ReachingForward):
 			break;
 			case(PlayerState.ReachingUp):
 			break;

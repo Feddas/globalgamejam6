@@ -38,7 +38,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: ReachingOut
+  - m_Name: ReachingForward
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -98,7 +98,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ReachingOut
+    m_ConditionEvent: ReachingForward
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -350,7 +350,7 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: ReachingOut
+    m_ConditionEvent: ReachingForward
     m_EventTreshold: 0
     m_ExitTime: .899999976
   m_Atomic: 1
@@ -376,7 +376,7 @@ State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ReachingOut
+  m_Name: ReachingForward
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
@@ -571,6 +571,9 @@ StateMachine:
       second:
       - {fileID: 110159460}
       - {fileID: 110172208}
+    data:
+      first: {fileID: 110255507}
+      second: []
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 768, y: 0, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
