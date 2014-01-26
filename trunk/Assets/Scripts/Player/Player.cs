@@ -130,10 +130,22 @@ public class Player : TargetPathingGameObject {
 	public void PerformPlayerArrivalCarryItemPickupCheck() {
 		HouseCarryItem houseCarryItemObjectReference = targetObject.GetComponent<HouseCarryItem>();
 
+		Debug.Log("Performing Player Arrival Carry Item Pickup Check");
+
 		if(targetObject != null) {
+			Debug.Log("Target Object: " + targetObject.name);
 			if(houseCarryItemObjectReference != null) {
 				Debug.Log("House carry item detected");
+				Debug.Log("House Carry Type: " + houseCarryItemObjectReference.type);
 
+				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedPillow1) {
+					targetObject.SetActive(false);
+					Player.Instance.pillow1 = this.gameObject;
+				}
+				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedPillow2) {
+					targetObject.SetActive(false);
+					Player.Instance.pillow2 = this.gameObject;
+				}
 			}
 		}
 	}
@@ -217,5 +229,9 @@ public class Player : TargetPathingGameObject {
 			itemInteractions.Add(targetItem, 1);
 		else
 			itemInteractions[targetItem]++;
+	}
+
+	public void PerformItemPickUpLogic(HouseItemType type) {
+
 	}
 }
