@@ -41,6 +41,7 @@ public class Player : TargetPathingGameObject {
 	// Update is called once per frame
 	public override void Update () {
 		base.Update();
+		PerformPlayerLogic();
 	}
 
 	public void PerformPlayerLogic() {
@@ -61,12 +62,14 @@ public class Player : TargetPathingGameObject {
 			case(PlayerState.ReachingUp):
 			break;
 			case(PlayerState.Standing):
+				PerformPlayerArrivalLogic();
 			break;
 		}
 	}
 	public void PerformPlayerArrivalLogic() {
 		if(this.gameObject.transform.position.x == targetPosition.x
 		   && this.gameObject.transform.position.y == targetPosition.y) {
+			//Debug.Log("Arrived in position");
 			if(!arrivedAtTargetPosition) {
 				arrivedAtTargetPosition = true;
 				currentState = PlayerState.Standing;
