@@ -650,7 +650,7 @@ GameObject:
   - 114: {fileID: 766271922}
   - 61: {fileID: 766271921}
   m_Layer: 0
-  m_Name: CreepyPainting1
+  m_Name: CreepyPainting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1021,6 +1021,9 @@ MonoBehaviour:
   animatorReference: {fileID: 0}
   facing: 0
   cinematicToPerform: {fileID: 0}
+  firePoker: {fileID: 0}
+  pillow1: {fileID: 0}
+  pillow2: {fileID: 0}
 --- !u!95 &1078227111
 Animator:
   serializedVersion: 2
@@ -1667,7 +1670,7 @@ GameObject:
   - 114: {fileID: 2122962521}
   - 61: {fileID: 2122962520}
   m_Layer: 0
-  m_Name: CreepyPainting1
+  m_Name: FirePoker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1679,9 +1682,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2122962518}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.4048061, y: 4.43188238, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: .909562767, w: .415566534}
+  m_LocalPosition: {x: -4.73000002, y: -1.85000002, z: 0}
+  m_LocalScale: {x: .600000024, y: .600000024, z: 1}
   m_Children: []
   m_Father: {fileID: 1204981559}
 --- !u!61 &2122962520
@@ -1693,7 +1696,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 5.51000023}
   m_Center: {x: 0, y: 0}
 --- !u!114 &2122962521
 MonoBehaviour:
@@ -1729,5 +1732,5 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_SortingLayerID: 2279694761
-  m_Sprite: {fileID: 21300000, guid: 4d2f5061305538e4f99e5ae4e5701e0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08782054938840349b95d04cc618bfee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
