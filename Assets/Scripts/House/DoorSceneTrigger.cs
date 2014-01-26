@@ -19,7 +19,7 @@ public class DoorSceneTrigger : MonoBehaviour {
 		//Debug.Log("Door change detected.");
 		if(otherCollider.gameObject.GetComponent<Player>() != null) {
 			if(!sceneToChangeTo.Equals(string.Empty)) {
-				Player.Instance.UpdateSpawnLocation(currentScene, sceneToChangeTo);
+				Player.Instance.UpdatePlayerLocation(currentScene, sceneToChangeTo);
 				Application.LoadLevel(sceneToChangeTo.ToString());
 			}
 		}

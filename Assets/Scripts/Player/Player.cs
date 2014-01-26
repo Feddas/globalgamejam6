@@ -47,24 +47,12 @@ public class Player : TargetPathingGameObject {
 		PerformPlayerLogic();
 	}
 
-	public void UpdateSpawnLocation(Room fromRoom, Room toRoom)
+	public void UpdatePlayerLocation(Room fromRoom, Room toRoom)
 	{
-		this.targetPosition = SpawnLocation.Instance.GetPositionInNewScene(fromRoom, toRoom);
+		this.targetPosition = PlayerLocation.Instance.GetPositionInNewScene(fromRoom, toRoom);
+		this.transform.position = new Vector3(this.targetPosition.x, this.targetPosition.y, 0);
 
-		switch (toRoom)
-		{
-		case Room.Attic:
-		case Room.Foyer:
-		case Room.Hallway:
-		case Room.LivingRoom:
-			this.maxWorldXBounding = 6.5f;
-			break;
-
-		//everything else
-		default:
-			this.maxWorldXBounding = 3.6f;
-			break;
-		}
+		this.maxWorldXBounding = PlayerLocation.Instance.GetMaxBoundsInScene(toRoom).x;
 	}
 
 	public void PerformPlayerLogic() {

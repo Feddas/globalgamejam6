@@ -71,7 +71,7 @@ MonoBehaviour:
   targetPosition: {x: 3.04999995, y: -3}
   useWorldBoundings: 1
   minWorldXBounding: -6.5999999
-  maxWorldXBounding: 3.5999999
+  maxWorldXBounding: 10
   minWorldYBounding: -2
   maxWorldYBounding: -4.9000001
   xMovementSpeed: .100000001
