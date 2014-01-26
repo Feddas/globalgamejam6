@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class DoorSceneTrigger : MonoBehaviour {
-	public string sceneToChangeTo = null;
+	public Room currentScene;
+	public Room sceneToChangeTo;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,8 @@ public class DoorSceneTrigger : MonoBehaviour {
 		//Debug.Log("Door change detected.");
 		if(otherCollider.gameObject.GetComponent<Player>() != null) {
 			if(!sceneToChangeTo.Equals(string.Empty)) {
-				Application.LoadLevel(sceneToChangeTo);
+				Player.Instance.UpdateSpawnLocation(currentScene, sceneToChangeTo);
+				Application.LoadLevel(sceneToChangeTo.ToString());
 			}
 		}
 	}
