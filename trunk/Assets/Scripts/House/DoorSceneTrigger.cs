@@ -15,7 +15,7 @@ public class DoorSceneTrigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D otherCollider) {
-		Debug.Log("Door change detected.");
+		//Debug.Log("Door change detected.");
 		if(otherCollider.gameObject.GetComponent<Player>() != null) {
 			if(!sceneToChangeTo.Equals(string.Empty)) {
 				Application.LoadLevel(sceneToChangeTo);

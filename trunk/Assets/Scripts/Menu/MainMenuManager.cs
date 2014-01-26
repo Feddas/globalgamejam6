@@ -10,7 +10,7 @@ public class MainMenuManager : MonoBehaviour {
 		//if(Player.Instance == false) {
 		//}
 		Player.Instance.currentState = PlayerState.InCinematic;
-		Debug.Log(Player.Instance.currentState);
+		//Debug.Log(Player.Instance.currentState);
 		Application.LoadLevel("FrontHouse");
 	}
 	
