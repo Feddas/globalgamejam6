@@ -1,0 +1,985 @@
+fileFormatVersion: 2
+guid: 19923ec0e9549944abe3bec38403c7dc
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 372.399994
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: broken_home_spritesheet_4096_001_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_1
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_2
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_3
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_4
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_5
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_6
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_7
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_8
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_9
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 3724
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_11
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_12
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_13
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_14
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_15
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_16
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_17
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_18
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_19
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 3352
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_21
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_22
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_23
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_24
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_25
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_26
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_27
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_28
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_29
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 2980
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_31
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_32
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_33
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_34
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_35
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_36
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_37
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_38
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_39
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 2608
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_41
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_42
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_43
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_44
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_45
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_46
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_47
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_48
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_49
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 2236
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_51
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_52
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_53
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_54
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_55
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_56
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_57
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_58
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_59
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 1864
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_61
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_62
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_63
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_64
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_65
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_66
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_67
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_68
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_69
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 1492
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_71
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_72
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_73
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_74
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_75
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_76
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_77
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_78
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_79
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 1120
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_81
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_82
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_83
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_84
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_85
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_86
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_87
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_88
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_89
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 748
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_91
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_92
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_93
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_94
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_95
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_96
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_97
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_98
+      rect:
+        serializedVersion: 2
+        x: 2976
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_99
+      rect:
+        serializedVersion: 2
+        x: 3348
+        y: 376
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_101
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 4
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_102
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 4
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: broken_home_spritesheet_4096_001_103
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 4
+        width: 372
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+  spritePackingTag: 
+  userData: 
