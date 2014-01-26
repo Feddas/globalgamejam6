@@ -3,6 +3,9 @@ using System.Collections;
 
 public class HouseCarryItem : HouseBaseObject {
 
+	public HouseItemType type = HouseItemType.None;
+	public CarriedItemsState state = CarriedItemsState.NotPickedUp;
+
 	// Use this for initialization
 	public override void Start () {
 		base.Start();

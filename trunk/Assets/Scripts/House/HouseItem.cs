@@ -17,6 +17,7 @@ public class HouseItem : HouseBaseObject {
 
 	public void OnMouseDown() {
 		//Debug.Log(this.gameObject.name + " was clicked.");
+		Debug.Log(TextLibrary.Instance.GetTextFor(type));
 
 		Vector3 mousePosition = Input.mousePosition;
 		Vector3 worldPosition = Camera.main.camera.ScreenToWorldPoint(mousePosition);
