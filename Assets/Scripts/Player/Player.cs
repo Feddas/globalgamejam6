@@ -13,6 +13,14 @@ public class Player : TargetPathingGameObject {
 
 	public GameObject cinematicToPerform = null;
 
+	//------------------------------------------------------
+	//These are all the items the player can pick up
+	//------------------------------------------------------
+	public GameObject firePoker = null;
+	public GameObject pillow1 = null;
+	public GameObject pillow2 = null;
+
+	//------------------------------------------------------
 	#region Singleton Declaration
 	//------------------------------------------------------ 
 	//Beginning of Singleton Declaration
@@ -113,10 +121,23 @@ public class Player : TargetPathingGameObject {
 			//Debug.Log("Arrived in position");
 			if(!arrivedAtTargetPosition) {
 				arrivedAtTargetPosition = true;
+				PerformPlayerArrivalCarryItemPickupCheck();
 				currentState = PlayerState.Standing;
 			}
 		}
 	}
+
+	public void PerformPlayerArrivalCarryItemPickupCheck() {
+		HouseCarryItem houseCarryItemObjectReference = targetObject.GetComponent<HouseCarryItem>();
+
+		if(targetObject != null) {
+			if(houseCarryItemObjectReference != null) {
+				Debug.Log("House carry item detected");
+
+			}
+		}
+	}
+
 
 	public override void SetTargetObjectAndTargetPosition(GameObject newTargetObject, Vector2 newTargetPosition) {
 		if(useWorldBoundings) {
