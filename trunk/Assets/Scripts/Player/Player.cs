@@ -7,7 +7,8 @@ public class Player : TargetPathingGameObject {
 	public PlayerState currentState = PlayerState.None;
 	
 	private Dictionary<HouseItemType, int> itemInteractions = new Dictionary<HouseItemType, int>();
-	//------------------------------------------------------
+	#region Singleton Declaration
+	//------------------------------------------------------ 
 	//Beginning of Singleton Declaration
 	//------------------------------------------------------
 	private static volatile Player _instance;
@@ -34,7 +35,7 @@ public class Player : TargetPathingGameObject {
 	private Player() {
 	}
 	//End of Singleton Declaration
-	//------------------------------------------------------
+	#endregion //------------------------------------------------------
 
 //	// Use this for initialization
 //	public override void Start () {
@@ -44,6 +45,26 @@ public class Player : TargetPathingGameObject {
 	public override void Update () {
 		base.Update();
 		PerformPlayerLogic();
+	}
+
+	public void UpdateSpawnLocation(Room fromRoom, Room toRoom)
+	{
+		this.targetPosition = SpawnLocation.Instance.GetPositionInNewScene(fromRoom, toRoom);
+
+		switch (toRoom)
+		{
+		case Room.Attic:
+		case Room.Foyer:
+		case Room.Hallway:
+		case Room.LivingRoom:
+			this.maxWorldXBounding = 6.5f;
+			break;
+
+		//everything else
+		default:
+			this.maxWorldXBounding = 3.6f;
+			break;
+		}
 	}
 
 	public void PerformPlayerLogic() {
