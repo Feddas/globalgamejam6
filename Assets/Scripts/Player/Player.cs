@@ -17,6 +17,7 @@ public class Player : TargetPathingGameObject {
 	//These are all the items the player can pick up
 	//------------------------------------------------------
 	public GameObject firePoker = null;
+	public GameObject mirrorShard = null;
 	public GameObject pillow1 = null;
 	public GameObject pillow2 = null;
 
@@ -54,6 +55,10 @@ public class Player : TargetPathingGameObject {
 //	// Use this for initialization
 	public override void Start () {
 		animatorReference = this.gameObject.GetComponent<Animator>();
+
+//		DontDestroyOnLoad(targetObject);
+//		DontDestroyOnLoad(pillow1);
+//		DontDestroyOnLoad(pillow2);
 	}
 
 	// Update is called once per frame
@@ -140,11 +145,24 @@ public class Player : TargetPathingGameObject {
 
 				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedPillow1) {
 					targetObject.SetActive(false);
-					Player.Instance.pillow1 = this.gameObject;
+					Player.Instance.pillow1 = targetObject;
+					Player.Instance.mirrorShard.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
+					DontDestroyOnLoad(Player.Instance.pillow1);
+					DontDestroyOnLoad(Player.Instance.targetObject);
 				}
 				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedPillow2) {
 					targetObject.SetActive(false);
-					Player.Instance.pillow2 = this.gameObject;
+					Player.Instance.pillow2 = targetObject;
+					Player.Instance.mirrorShard.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
+					DontDestroyOnLoad(Player.Instance.pillow2);
+					DontDestroyOnLoad(Player.Instance.targetObject);
+				}
+				if(houseCarryItemObjectReference.type == HouseItemType.MasterbedMirrorShard) {
+					targetObject.SetActive(false);
+					Player.Instance.mirrorShard = targetObject;
+					Player.Instance.mirrorShard.GetComponent<HouseCarryItem>().state = CarriedItemsState.Carrying;
+					DontDestroyOnLoad(Player.Instance.mirrorShard);
+					DontDestroyOnLoad(Player.Instance.targetObject);
 				}
 			}
 		}
@@ -229,9 +247,5 @@ public class Player : TargetPathingGameObject {
 			itemInteractions.Add(targetItem, 1);
 		else
 			itemInteractions[targetItem]++;
-	}
-
-	public void PerformItemPickUpLogic(HouseItemType type) {
-
 	}
 }

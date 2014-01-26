@@ -5,6 +5,9 @@ public class HouseItem : HouseBaseObject {
 
 	public HouseItemType type = HouseItemType.None;
 
+	public override void Awake() {
+	}
+
 	// Use this for initialization
 	public override void Start () {
 		base.Start();

@@ -149,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83622454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.36999989, y: -1.04999995, z: 0}
+  m_LocalPosition: {x: -2.36999989, y: -1.04999995, z: -1}
   m_LocalScale: {x: .400000006, y: .400000006, z: 1}
   m_Children: []
   m_Father: {fileID: 582041236}
@@ -172,11 +172,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 83622454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
+  m_Script: {fileID: 11500000, guid: b910339037378264f96b4a0531886594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
   type: 40
+  state: 0
 --- !u!212 &83622458
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -225,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 248994037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.69316196, y: -4.0370636, z: 0}
+  m_LocalPosition: {x: 5.69316196, y: -4.0370636, z: -1}
   m_LocalScale: {x: .806164384, y: .806163788, z: 1}
   m_Children: []
   m_Father: {fileID: 582041236}
@@ -792,7 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReference: {fileID: 0}
-  type: 31
+  type: 34
 --- !u!61 &921162918
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1108,7 +1109,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1855687675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.48452616, y: -3.53939772, z: 0}
+  m_LocalPosition: {x: -1.48452616, y: -3.53939772, z: -1}
   m_LocalScale: {x: .772242844, y: .772243142, z: 1}
   m_Children: []
   m_Father: {fileID: 582041236}
@@ -1258,8 +1259,8 @@ SpriteRenderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2279694761
   m_Sprite: {fileID: 21300000, guid: be6f60aa24cd00e409584d034b59d0fb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

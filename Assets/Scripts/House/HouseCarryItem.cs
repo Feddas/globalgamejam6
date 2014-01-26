@@ -6,6 +6,10 @@ public class HouseCarryItem : HouseBaseObject {
 	public HouseItemType type = HouseItemType.None;
 	public CarriedItemsState state = CarriedItemsState.NotPickedUp;
 
+	public override void Awake() {
+		DontDestroyOnLoad(this.gameObject);
+	}
+
 	// Use this for initialization
 	public override void Start () {
 		base.Start();
