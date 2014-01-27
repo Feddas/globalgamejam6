@@ -5,12 +5,12 @@ PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   AndroidProfiler: 0
-  defaultScreenOrientation: 0
+  defaultScreenOrientation: 2
   targetDevice: 2
   targetGlesGraphics: 1
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: ShawnSeanLoganand2xDan
   productName: globalgamejam6
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -26,7 +26,7 @@ PlayerSettings:
   m_UseDX11: 0
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
-  displayResolutionDialog: 1
+  displayResolutionDialog: 0
   allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 1
   allowedAutorotateToLandscapeRight: 1
@@ -34,7 +34,7 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   use24BitDepthBuffer: 1
-  defaultIsFullScreen: 1
+  defaultIsFullScreen: 0
   defaultIsNativeResolution: 1
   runInBackground: 0
   captureSingleScreen: 0
@@ -73,9 +73,9 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.Company.ProductName
+  iPhoneBundleIdentifier: com.GGJ2014.BrokenHome
   productGUID: ca48a2a122c43d343b36a8c7875a7ffa
-  iPhoneBundleVersion: 1.0
+  iPhoneBundleVersion: 0.1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -107,7 +107,11 @@ PlayerSettings:
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - m_Icon: {fileID: 2800000, guid: edcc29947bfbff042a46526014893bb2, type: 3}
+      m_Size: 128
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
