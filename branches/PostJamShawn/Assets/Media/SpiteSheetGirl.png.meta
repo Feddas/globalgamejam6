@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19923ec0e9549944abe3bec38403c7dc
+guid: 86458e61ca5c691409d9a1521bdee1d1
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -23,7 +23,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 4096
   textureSettings:
-    filterMode: 0
+    filterMode: -1
     aniso: 1
     mipBias: -1
     wrapMode: 1
@@ -35,7 +35,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
-  spritePixelsToUnits: 372.399994
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings:
@@ -45,941 +45,941 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: broken_home_spritesheet_4096_001_0
+    - name: SpiteSheetGirl_0
       rect:
         serializedVersion: 2
         x: 0
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_1
+    - name: SpiteSheetGirl_1
       rect:
         serializedVersion: 2
         x: 372
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_2
+    - name: SpiteSheetGirl_2
       rect:
         serializedVersion: 2
         x: 744
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_3
+    - name: SpiteSheetGirl_3
       rect:
         serializedVersion: 2
         x: 1116
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_4
+    - name: SpiteSheetGirl_4
       rect:
         serializedVersion: 2
         x: 1488
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_5
+    - name: SpiteSheetGirl_5
       rect:
         serializedVersion: 2
         x: 1860
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_6
+    - name: SpiteSheetGirl_6
       rect:
         serializedVersion: 2
         x: 2232
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_7
+    - name: SpiteSheetGirl_7
       rect:
         serializedVersion: 2
         x: 2604
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_8
+    - name: SpiteSheetGirl_8
       rect:
         serializedVersion: 2
         x: 2976
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_9
+    - name: SpiteSheetGirl_9
       rect:
         serializedVersion: 2
         x: 3348
         y: 3724
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_10
+    - name: SpiteSheetGirl_10
       rect:
         serializedVersion: 2
         x: 0
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_11
+    - name: SpiteSheetGirl_11
       rect:
         serializedVersion: 2
         x: 372
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_12
+    - name: SpiteSheetGirl_12
       rect:
         serializedVersion: 2
         x: 744
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_13
+    - name: SpiteSheetGirl_13
       rect:
         serializedVersion: 2
         x: 1116
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_14
+    - name: SpiteSheetGirl_14
       rect:
         serializedVersion: 2
         x: 1488
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_15
+    - name: SpiteSheetGirl_15
       rect:
         serializedVersion: 2
         x: 1860
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_16
+    - name: SpiteSheetGirl_16
       rect:
         serializedVersion: 2
         x: 2232
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_17
+    - name: SpiteSheetGirl_17
       rect:
         serializedVersion: 2
         x: 2604
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_18
+    - name: SpiteSheetGirl_18
       rect:
         serializedVersion: 2
         x: 2976
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_19
+    - name: SpiteSheetGirl_19
       rect:
         serializedVersion: 2
         x: 3348
         y: 3352
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_20
+    - name: SpiteSheetGirl_20
       rect:
         serializedVersion: 2
         x: 0
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_21
+    - name: SpiteSheetGirl_21
       rect:
         serializedVersion: 2
         x: 372
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_22
+    - name: SpiteSheetGirl_22
       rect:
         serializedVersion: 2
         x: 744
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_23
+    - name: SpiteSheetGirl_23
       rect:
         serializedVersion: 2
         x: 1116
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_24
+    - name: SpiteSheetGirl_24
       rect:
         serializedVersion: 2
         x: 1488
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_25
+    - name: SpiteSheetGirl_25
       rect:
         serializedVersion: 2
         x: 1860
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_26
+    - name: SpiteSheetGirl_26
       rect:
         serializedVersion: 2
         x: 2232
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_27
+    - name: SpiteSheetGirl_27
       rect:
         serializedVersion: 2
         x: 2604
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_28
+    - name: SpiteSheetGirl_28
       rect:
         serializedVersion: 2
         x: 2976
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_29
+    - name: SpiteSheetGirl_29
       rect:
         serializedVersion: 2
         x: 3348
         y: 2980
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_30
+    - name: SpiteSheetGirl_30
       rect:
         serializedVersion: 2
         x: 0
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_31
+    - name: SpiteSheetGirl_31
       rect:
         serializedVersion: 2
         x: 372
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_32
+    - name: SpiteSheetGirl_32
       rect:
         serializedVersion: 2
         x: 744
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_33
+    - name: SpiteSheetGirl_33
       rect:
         serializedVersion: 2
         x: 1116
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_34
+    - name: SpiteSheetGirl_34
       rect:
         serializedVersion: 2
         x: 1488
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_35
+    - name: SpiteSheetGirl_35
       rect:
         serializedVersion: 2
         x: 1860
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_36
+    - name: SpiteSheetGirl_36
       rect:
         serializedVersion: 2
         x: 2232
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_37
+    - name: SpiteSheetGirl_37
       rect:
         serializedVersion: 2
         x: 2604
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_38
+    - name: SpiteSheetGirl_38
       rect:
         serializedVersion: 2
         x: 2976
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_39
+    - name: SpiteSheetGirl_39
       rect:
         serializedVersion: 2
         x: 3348
         y: 2608
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_40
+    - name: SpiteSheetGirl_40
       rect:
         serializedVersion: 2
         x: 0
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_41
+    - name: SpiteSheetGirl_41
       rect:
         serializedVersion: 2
         x: 372
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_42
+    - name: SpiteSheetGirl_42
       rect:
         serializedVersion: 2
         x: 744
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_43
+    - name: SpiteSheetGirl_43
       rect:
         serializedVersion: 2
         x: 1116
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_44
+    - name: SpiteSheetGirl_44
       rect:
         serializedVersion: 2
         x: 1488
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_45
+    - name: SpiteSheetGirl_45
       rect:
         serializedVersion: 2
         x: 1860
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_46
+    - name: SpiteSheetGirl_46
       rect:
         serializedVersion: 2
         x: 2232
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_47
+    - name: SpiteSheetGirl_47
       rect:
         serializedVersion: 2
         x: 2604
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_48
+    - name: SpiteSheetGirl_48
       rect:
         serializedVersion: 2
         x: 2976
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_49
+    - name: SpiteSheetGirl_49
       rect:
         serializedVersion: 2
         x: 3348
         y: 2236
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_50
+    - name: SpiteSheetGirl_50
       rect:
         serializedVersion: 2
         x: 0
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_51
+    - name: SpiteSheetGirl_51
       rect:
         serializedVersion: 2
         x: 372
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_52
+    - name: SpiteSheetGirl_52
       rect:
         serializedVersion: 2
         x: 744
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_53
+    - name: SpiteSheetGirl_53
       rect:
         serializedVersion: 2
         x: 1116
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_54
+    - name: SpiteSheetGirl_54
       rect:
         serializedVersion: 2
         x: 1488
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_55
+    - name: SpiteSheetGirl_55
       rect:
         serializedVersion: 2
         x: 1860
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_56
+    - name: SpiteSheetGirl_56
       rect:
         serializedVersion: 2
         x: 2232
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_57
+    - name: SpiteSheetGirl_57
       rect:
         serializedVersion: 2
         x: 2604
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_58
+    - name: SpiteSheetGirl_58
       rect:
         serializedVersion: 2
         x: 2976
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_59
+    - name: SpiteSheetGirl_59
       rect:
         serializedVersion: 2
         x: 3348
         y: 1864
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_60
+    - name: SpiteSheetGirl_60
       rect:
         serializedVersion: 2
         x: 0
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_61
+    - name: SpiteSheetGirl_61
       rect:
         serializedVersion: 2
         x: 372
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_62
+    - name: SpiteSheetGirl_62
       rect:
         serializedVersion: 2
         x: 744
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_63
+    - name: SpiteSheetGirl_63
       rect:
         serializedVersion: 2
         x: 1116
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_64
+    - name: SpiteSheetGirl_64
       rect:
         serializedVersion: 2
         x: 1488
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_65
+    - name: SpiteSheetGirl_65
       rect:
         serializedVersion: 2
         x: 1860
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_66
+    - name: SpiteSheetGirl_66
       rect:
         serializedVersion: 2
         x: 2232
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_67
+    - name: SpiteSheetGirl_67
       rect:
         serializedVersion: 2
         x: 2604
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_68
+    - name: SpiteSheetGirl_68
       rect:
         serializedVersion: 2
         x: 2976
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_69
+    - name: SpiteSheetGirl_69
       rect:
         serializedVersion: 2
         x: 3348
         y: 1492
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_70
+    - name: SpiteSheetGirl_70
       rect:
         serializedVersion: 2
         x: 0
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_71
+    - name: SpiteSheetGirl_71
       rect:
         serializedVersion: 2
         x: 372
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_72
+    - name: SpiteSheetGirl_72
       rect:
         serializedVersion: 2
         x: 744
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_73
+    - name: SpiteSheetGirl_73
       rect:
         serializedVersion: 2
         x: 1116
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_74
+    - name: SpiteSheetGirl_74
       rect:
         serializedVersion: 2
         x: 1488
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_75
+    - name: SpiteSheetGirl_75
       rect:
         serializedVersion: 2
         x: 1860
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_76
+    - name: SpiteSheetGirl_76
       rect:
         serializedVersion: 2
         x: 2232
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_77
+    - name: SpiteSheetGirl_77
       rect:
         serializedVersion: 2
         x: 2604
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_78
+    - name: SpiteSheetGirl_78
       rect:
         serializedVersion: 2
         x: 2976
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_79
+    - name: SpiteSheetGirl_79
       rect:
         serializedVersion: 2
         x: 3348
         y: 1120
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_80
+    - name: SpiteSheetGirl_80
       rect:
         serializedVersion: 2
         x: 0
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_81
+    - name: SpiteSheetGirl_81
       rect:
         serializedVersion: 2
         x: 372
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_82
+    - name: SpiteSheetGirl_82
       rect:
         serializedVersion: 2
         x: 744
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_83
+    - name: SpiteSheetGirl_83
       rect:
         serializedVersion: 2
         x: 1116
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_84
+    - name: SpiteSheetGirl_84
       rect:
         serializedVersion: 2
         x: 1488
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_85
+    - name: SpiteSheetGirl_85
       rect:
         serializedVersion: 2
         x: 1860
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_86
+    - name: SpiteSheetGirl_86
       rect:
         serializedVersion: 2
         x: 2232
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_87
+    - name: SpiteSheetGirl_87
       rect:
         serializedVersion: 2
         x: 2604
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_88
+    - name: SpiteSheetGirl_88
       rect:
         serializedVersion: 2
         x: 2976
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_89
+    - name: SpiteSheetGirl_89
       rect:
         serializedVersion: 2
         x: 3348
         y: 748
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_90
+    - name: SpiteSheetGirl_90
       rect:
         serializedVersion: 2
         x: 0
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_91
+    - name: SpiteSheetGirl_91
       rect:
         serializedVersion: 2
         x: 372
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_92
+    - name: SpiteSheetGirl_92
       rect:
         serializedVersion: 2
         x: 744
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_93
+    - name: SpiteSheetGirl_93
       rect:
         serializedVersion: 2
         x: 1116
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_94
+    - name: SpiteSheetGirl_94
       rect:
         serializedVersion: 2
         x: 1488
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_95
+    - name: SpiteSheetGirl_95
       rect:
         serializedVersion: 2
         x: 1860
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_96
+    - name: SpiteSheetGirl_96
       rect:
         serializedVersion: 2
         x: 2232
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_97
+    - name: SpiteSheetGirl_97
       rect:
         serializedVersion: 2
         x: 2604
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_98
+    - name: SpiteSheetGirl_98
       rect:
         serializedVersion: 2
         x: 2976
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_99
+    - name: SpiteSheetGirl_99
       rect:
         serializedVersion: 2
         x: 3348
         y: 376
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_100
+    - name: SpiteSheetGirl_100
       rect:
         serializedVersion: 2
         x: 0
         y: 4
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_101
+    - name: SpiteSheetGirl_101
       rect:
         serializedVersion: 2
         x: 372
         y: 4
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_102
+    - name: SpiteSheetGirl_102
       rect:
         serializedVersion: 2
         x: 744
         y: 4
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
-    - name: broken_home_spritesheet_4096_001_103
+    - name: SpiteSheetGirl_103
       rect:
         serializedVersion: 2
         x: 1116
         y: 4
         width: 372
         height: 372
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
   spritePackingTag: 
   userData: 
