@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PlayerReachingUp
+  serializedVersion: 4
+  m_AnimationType: 2
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300176, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .0668333322
+      value: {fileID: 21300178, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .133499995
+      value: {fileID: 21300180, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .200000003
+      value: {fileID: 21300182, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .266666681
+      value: {fileID: 21300184, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .333333343
+      value: {fileID: 21300186, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .400000006
+      value: {fileID: 21300188, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .466666669
+      value: {fileID: 21300190, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .533333361
+      value: {fileID: 21300192, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .600000024
+      value: {fileID: 21300194, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .666666687
+      value: {fileID: 21300196, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .733333349
+      value: {fileID: 21300198, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .800000012
+      value: {fileID: 21300200, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .866666675
+      value: {fileID: 21300202, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: .933333337
+      value: {fileID: 21300204, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    - time: 1
+      value: {fileID: 21300206, guid: 19923ec0e9549944abe3bec38403c7dc, type: 3}
+    attribute: m_Sprite
+    path: PlayerSprite
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_StartTime: 0
+    m_StopTime: 1.01666665
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_Events: []
