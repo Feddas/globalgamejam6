@@ -18,7 +18,9 @@ public class GirlController : MonoBehaviour
 		this.anim = GetComponent<Animator>();
 		this.cameraTarget = FollowingCamera.transform.position; // reference the camera's y & z values
 		State.Instance.Girl = this;
-		this.CurrentDialog = TextLibrary.Instance.GetTextFor(Room.FrontHouse);
+		
+		State.Instance.Completed = Completion.PlacedUrn;
+		this.CurrentDialog = TextLibrary.Instance.GetTextFor(Room.FrontHouse); //TODO: somehow move this line to GirlLocation.cs
 	}
 
 	void Start() { }

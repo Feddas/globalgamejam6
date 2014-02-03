@@ -46,15 +46,16 @@ public static class Tuple
 /// <typeparam name="T2">The type of the second element</typeparam>
 public sealed class Tuple<T1, T2>
 {
-	private readonly T1 item1;
-	private readonly T2 item2;
+	private T1 item1;
+	private T2 item2;
 	
 	/// <summary>
-	/// Retyurns the first element of the tuple
+	/// Returns the first element of the tuple
 	/// </summary>
 	public T1 Item1
 	{
 		get { return item1; }
+		set { if (areEqual(value, item1)) return; item1 = value; }
 	}
 	
 	/// <summary>
@@ -63,6 +64,7 @@ public sealed class Tuple<T1, T2>
 	public T2 Item2
 	{
 		get { return item2; }
+		set { if (areEqual(value, item2)) return; item2 = value; }
 	}
 	
 	/// <summary>
@@ -105,6 +107,11 @@ public sealed class Tuple<T1, T2>
 		return 
 			a.item1.Equals(b.item1) && 
 				a.item2.Equals(b.item2);            
+	}
+
+	private static bool areEqual<T1orT2>(T1orT2 a, T1orT2 b)
+	{
+		return a.Equals(b);
 	}
 	
 	public static bool operator!=(Tuple<T1, T2> a, Tuple<T1, T2> b)

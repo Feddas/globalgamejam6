@@ -32,8 +32,8 @@ public class State
 	#endregion display game dialog
 
 	#region item state
-	private Dictionary<HouseItemType, int> itemInteractions = new Dictionary<HouseItemType, int>();
-	public int GetItemState(HouseItemType targetItem)
+	private Dictionary<Tuple<HouseItemType, Completion>, int> itemInteractions = new Dictionary<Tuple<HouseItemType, Completion>, int>();
+	public int GetItemState(Tuple<HouseItemType, Completion> targetItem)
 	{
 		if (itemInteractions.ContainsKey(targetItem) == false)
 			return 0;
@@ -41,7 +41,7 @@ public class State
 			return itemInteractions[targetItem];
 	}
 	
-	public void IncrementItemState(HouseItemType targetItem)
+	public void IncrementItemState(Tuple<HouseItemType, Completion> targetItem)
 	{
 		if (itemInteractions.ContainsKey(targetItem) == false)
 			itemInteractions.Add(targetItem, 1);
@@ -49,7 +49,7 @@ public class State
 			itemInteractions[targetItem]++;
 	}
 
-	public void ResetItemState(HouseItemType targetItem)
+	public void ResetItemState(Tuple<HouseItemType, Completion> targetItem)
 	{		
 		if (itemInteractions.ContainsKey(targetItem) == false)
 			itemInteractions.Add(targetItem, 0);

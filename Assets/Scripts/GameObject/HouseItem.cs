@@ -10,15 +10,15 @@ public class HouseItem : MonoBehaviour {
 	void Update() { }
 
 	public void OnMouseDown() {
-		string debugText = TextLibrary.Instance.GetTextFor(type);
-		if (string.IsNullOrEmpty(debugText))
+		string dialogText = TextLibrary.Instance.GetTextFor(type);
+		if (string.IsNullOrEmpty(dialogText))
 		{
-			debugText = this.gameObject.name + " was clicked.";
+			Debug.Log(this.gameObject.name + " was clicked.");
+			return;
 		}
-		if (debugText != TextLibrary.CompletedDialog)
+		else if (dialogText != TextLibrary.CompletedDialog)
 		{
-			State.Instance.CurrentDialog = debugText;
-			Debug.Log(debugText);
+			State.Instance.CurrentDialog = dialogText;
 
 			if (State.Instance.GameDialog != null) //if it is null, it hasn't been closed yet. therefore, it's already visible.
 				State.Instance.GameDialog.IsVisible = true;
