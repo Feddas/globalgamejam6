@@ -5,12 +5,15 @@ using System.Collections;
 public class VisibilityToggle : MonoBehaviour
 {
 	public dfControl targetControl;
-	
+
+	void Awake()
+	{
+		if (State.Instance.GameDialog == null)
+			State.Instance.GameDialog = targetControl;
+	}
+
 	public void OnClick()
 	{
 		targetControl.IsVisible = !targetControl.IsVisible;
-
-		if (State.Instance.GameDialog == null)
-			State.Instance.GameDialog = targetControl;
 	}
 }

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public class TextLibrary
 {
 	public const string CompletedDialog = "<CompletedDialog>";
+
+	#region singleton
 	private static volatile TextLibrary _instance;
 	private static object _lock = new object();
 	
@@ -20,27 +22,35 @@ public class TextLibrary
 		}
 	}
 
-	//TODO: store by a key of Tuple<HouseItemType, Completion>
+	//Stops the lock being created ahead of time if it's not necessary
+	static TextLibrary() { }
+	#endregion singleton
+
 	/// <summary> Text for all house items is sorted first by the item type then by observing the player state to index the List<string> </summary>
-	Dictionary<HouseItemType, List<string>> TextHouseItem;
+	Dictionary<Tuple<HouseItemType, Completion>, List<string>> TextHouseItem;
 	
 	/// <summary> Dialogs triggered by a flashback or entering a room (such as by the front door)</summary>
-	Dictionary<Room, List<string>> TextRoom;
-	
-	//Stops the lock being created ahead of time if it's not necessary
-	static TextLibrary() {
-	}
-	
+	Dictionary<Tuple<Room, Completion>, List<string>> TextRoom;
+		
 	private TextLibrary() {
 		loadTextHouseItem();
 		loadTextRoom();
 	}
 	
 	public string GetTextFor(HouseItemType targetItem)
-	{		
-		if (TextHouseItem.ContainsKey(targetItem) == false)
-			return null;
+	{
 		Completion completed = State.Instance.Completed;
+		var textKey = Tuple.Create(targetItem, completed);
+
+		//find closest text to current level of completion
+		while (TextHouseItem.ContainsKey(textKey) == false)
+		{
+			if ((int)completed == 0)
+				return null;
+			
+			completed = (Completion)((int)completed - 1);
+			textKey.Item2 = completed;
+		}
 		int itemState = 0;
 
 		//use random value
@@ -55,83 +65,80 @@ public class TextLibrary
 		//check progress of item dialog to determine which itemState string to use
 		if (itemState == 0)
 		{
-			itemState = State.Instance.GetItemState(targetItem);
-			State.Instance.IncrementItemState(targetItem);
+			itemState = State.Instance.GetItemState(textKey);
+			State.Instance.IncrementItemState(textKey);
 		}
 		
-		if (itemState > TextHouseItem[targetItem].Count - 1)
+		if (itemState > TextHouseItem[textKey].Count - 1)
 		{
-			State.Instance.ResetItemState(targetItem); //TODO: get this reset to work
+			State.Instance.ResetItemState(textKey);
 			return CompletedDialog;
 		}
 		else
-			return TextHouseItem[targetItem][itemState];
+			return TextHouseItem[textKey][itemState];
 	}
 	
 	public string GetTextFor(Room targetRoom)
 	{
-		if (TextRoom.ContainsKey(targetRoom) == false)
-			return null;
+		Completion completed = State.Instance.Completed;
+		var textKey = Tuple.Create(targetRoom, completed);
+
+		//find closest text to current level of completion
+		while (TextRoom.ContainsKey(textKey) == false)
+		{
+			if ((int)completed == 0)
+				return null;
+
+			completed = (Completion)((int)completed - 1);
+			textKey.Item2 = completed;
+		}
 		
-		return TextRoom[targetRoom][0];
+		return TextRoom[textKey][0];
 	}
 	
 	private void loadTextHouseItem()
 	{
-		TextHouseItem = new Dictionary<HouseItemType, List<string>>();
-		TextHouseItem.Add(HouseItemType.AtticBoxes, new List<string>{
+		TextHouseItem = new Dictionary<Tuple<HouseItemType, Completion>, List<string>>();
+		TextHouseItem.Add(Tuple.Create(HouseItemType.AtticBoxes, Completion.None), new List<string>{
 			"These are filled with Liz’s old stuff…"});
-		TextHouseItem.Add(HouseItemType.AtticRockingHorse, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.AtticRockingHorse, Completion.None), new List<string>{
 			"The attic used to be empty. This must be where Dad put all of the old things after Mom died."});
-		TextHouseItem.Add(HouseItemType.BedroomBed, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.BedroomBed, Completion.None), new List<string>{
 			"My old bed… it’s just as I left it. I think I’ll lay down for a moment…"});
-		TextHouseItem.Add(HouseItemType.BedroomPainting, new List<string>{//Poster
+		TextHouseItem.Add(Tuple.Create(HouseItemType.BedroomPainting, Completion.None), new List<string>{//Poster
 			"I can’t believe I listened to them…"});
-		TextHouseItem.Add(HouseItemType.FrontCar, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.FrontCar, Completion.None), new List<string>{
 			"I did what I came for. Time to put this place, and the past, in the mirror…"});
-		TextHouseItem.Add(HouseItemType.LivingroomCodex, new List<string>{//without all pieces
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.None), new List<string>{//without all pieces
 			"This looks like it would fit in the puzzle box. I guess these things are just lying about. I wonder how many more there are."});
-		TextHouseItem.Add(HouseItemType.LivingroomFirePoker, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.None), new List<string>{
 			"This place is even creepier than I remember. Maybe I’ll keep this with me…just in case."});
-		TextHouseItem.Add(HouseItemType.LivingroomFireplaceMantle, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFireplaceMantle, Completion.None), new List<string>{
 			"Here you go Dad. You have the place all to yourself, just like you wanted."});
-		TextHouseItem.Add(HouseItemType.LivingroomPaintingFireplace, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingFireplace, Completion.None), new List<string>{
 			"I don’t remember this being here… it looks like there’s a note tucked behind the canvas."});
-		TextHouseItem.Add(HouseItemType.LivingroomPaintingsCreepy, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingsCreepy, Completion.None), new List<string>{
 			"The original home owners. Mom said these paintings had charm, but I always felt like they were staring at me."});
-		TextHouseItem.Add(HouseItemType.FoyerChair, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.FoyerChair, Completion.None), new List<string>{
 			"I always hid behind this while playing with Liz…"});
-		TextHouseItem.Add(HouseItemType.FoyerMirror, new List<string>{//without mirror shard
-			"The mirror…", "I remember…"});
-		TextHouseItem.Add(HouseItemType.DoorAttic, new List<string>{//without FirePoker
+		TextHouseItem.Add(Tuple.Create(HouseItemType.FoyerMirror, Completion.None), new List<string>{//without mirror shard
+			"The mirror...",
+			"I remember..."});
+		TextHouseItem.Add(Tuple.Create(HouseItemType.DoorAttic, Completion.None), new List<string>{//without FirePoker
 			"None of us were ever able to open the attic once the chord broke. We always used something to reach up there…"});
-		TextHouseItem.Add(HouseItemType.HallDoorLockedBathroom, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.HallDoorLockedBathroom, Completion.None), new List<string>{
 			"It's just the bathroom."});
-		TextHouseItem.Add(HouseItemType.HallFloorboard, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.HallFloorboard, Completion.None), new List<string>{
 			"Wasn’t Dad supposed to fix this? It looks loose…"});
-		TextHouseItem.Add(HouseItemType.MasterbedMirrorShard, new List<string>{
+		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedMirrorShard, Completion.None), new List<string>{
 			"This looks like it would fit somewhere…"});
 	}
 	
 	private void loadTextRoom()
 	{
-		TextRoom = new Dictionary<Room, List<string>>();
-		TextRoom.Add(Room.FrontHouse, new List<string>{
-@"It’s been so long since I’ve been home.
-I hardly remember the place, but Dad wanted his ashes placed over the mantle. I’ll just put them there and leave.
-Strange to have an unfinished inscription on the urn though. All it says is, YOU ARE."});
-		TextRoom.Add(Room.Attic, new List<string>{
-		});
-		TextRoom.Add(Room.Bedroom, new List<string>{
-		});
-		TextRoom.Add(Room.Foyer, new List<string>{
-		});
-		TextRoom.Add(Room.Hallway, new List<string>{
-		});
-		TextRoom.Add(Room.LivingRoom, new List<string>{
-		});
-		TextRoom.Add(Room.Masterbed, new List<string>{
-		});
-		
+		TextRoom = new Dictionary<Tuple<Room, Completion>, List<string>>();
+		TextRoom.Add(Tuple.Create(Room.FrontHouse, Completion.Start), new List<string>{
+@"It's been so long since I've been home. I hardly remember the place, but Dad wanted his ashes placed over the mantle. I'll just put them there and leave.
+Strange to have an unfinished inscription on the urn though. All it says is, ""YOU ARE""."});
 	}
 }
