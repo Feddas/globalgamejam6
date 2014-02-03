@@ -4,6 +4,9 @@ using System.Collections;
 //NOTE: sprite sheet uses 372x372
 public class GirlController : MonoBehaviour
 {
+	/// <summary> The exposing of State.CurrentDialog to a game object </summary>
+	public string CurrentDialog { get; set;	}
+
 	public Camera FollowingCamera;
 
 	bool isWalking;
@@ -12,8 +15,10 @@ public class GirlController : MonoBehaviour
 	
 	void Awake()
 	{
-		anim = GetComponent<Animator>();
-		cameraTarget = FollowingCamera.transform.position; // reference the camera's y & z values
+		this.anim = GetComponent<Animator>();
+		this.cameraTarget = FollowingCamera.transform.position; // reference the camera's y & z values
+		State.Instance.Girl = this;
+		this.CurrentDialog = TextLibrary.Instance.GetTextFor(Room.FrontHouse);
 	}
 
 	void Start() { }

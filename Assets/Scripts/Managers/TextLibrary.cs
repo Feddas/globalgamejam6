@@ -19,7 +19,8 @@ public class TextLibrary
 			return _instance;
 		}
 	}
-	
+
+	//TODO: store by a key of Tuple<HouseItemType, Completion>
 	/// <summary> Text for all house items is sorted first by the item type then by observing the player state to index the List<string> </summary>
 	Dictionary<HouseItemType, List<string>> TextHouseItem;
 	
@@ -36,28 +37,33 @@ public class TextLibrary
 	}
 	
 	public string GetTextFor(HouseItemType targetItem)
-	{
-		int itemState = 0;
-		
+	{		
 		if (TextHouseItem.ContainsKey(targetItem) == false)
 			return null;
-		
+		Completion completed = State.Instance.Completed;
+		int itemState = 0;
+
+		//use random value
 		switch (targetItem)
 		{
-		case HouseItemType.AtticRockingHorse:
-			itemState = Player.Instance.GetItemState(targetItem); //TODO: observe player object to determine which itemState string to use
-			Player.Instance.IncrementItemState(targetItem);
-			break;
 		case HouseItemType.AtticBoxes:
 			itemState = Random.Range(0, 2);
 			break;
-			
-		default:
-			break;
+		default: break;
+		}
+
+		//check progress of item dialog to determine which itemState string to use
+		if (itemState == 0)
+		{
+			itemState = State.Instance.GetItemState(targetItem);
+			State.Instance.IncrementItemState(targetItem);
 		}
 		
 		if (itemState > TextHouseItem[targetItem].Count - 1)
+		{
+			State.Instance.ResetItemState(targetItem); //TODO: get this reset to work
 			return CompletedDialog;
+		}
 		else
 			return TextHouseItem[targetItem][itemState];
 	}
@@ -96,7 +102,7 @@ public class TextLibrary
 		TextHouseItem.Add(HouseItemType.FoyerChair, new List<string>{
 			"I always hid behind this while playing with Liz…"});
 		TextHouseItem.Add(HouseItemType.FoyerMirror, new List<string>{//without mirror shard
-			"The mirror… I remember…"});
+			"The mirror…", "I remember…"});
 		TextHouseItem.Add(HouseItemType.DoorAttic, new List<string>{//without FirePoker
 			"None of us were ever able to open the attic once the chord broke. We always used something to reach up there…"});
 		TextHouseItem.Add(HouseItemType.HallDoorLockedBathroom, new List<string>{
@@ -111,9 +117,9 @@ public class TextLibrary
 	{
 		TextRoom = new Dictionary<Room, List<string>>();
 		TextRoom.Add(Room.FrontHouse, new List<string>{
-			"It’s been so long since I’ve been home.",
-			"I hardly remember the place, but Dad wanted his ashes placed over the mantle. I’ll just put them there and leave.",
-			"Strange to have an unfinished inscription on the urn though. All it says is, YOU ARE."});
+@"It’s been so long since I’ve been home.
+I hardly remember the place, but Dad wanted his ashes placed over the mantle. I’ll just put them there and leave.
+Strange to have an unfinished inscription on the urn though. All it says is, YOU ARE."});
 		TextRoom.Add(Room.Attic, new List<string>{
 		});
 		TextRoom.Add(Room.Bedroom, new List<string>{
