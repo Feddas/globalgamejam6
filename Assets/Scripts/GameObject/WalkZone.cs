@@ -4,7 +4,107 @@ using System.Collections;
 public class WalkZone : MonoBehaviour
 {
 	public GameObject Girl;
+	public Camera FollowingCamera;
+
+	GirlController girlController;
+	bool isWalking;
+	Vector3 walkTarget, cameraTarget;
+	
+	//public delegate void Action<T>(T arg1);
+	public delegate void Action(float arg1);
+	public delegate void Action2(bool arg2);
+	Action animateGrab;
+	Action2 animateWalk;
+
+	void Awake()
+	{
+		this.cameraTarget = this.FollowingCamera.transform.position; // reference the camera's y & z values
+
+		this.girlController = this.Girl.GetComponent<GirlController>();
+		this.animateGrab = this.girlController.AnimateGrab;
+		this.animateWalk = this.girlController.AnimateWalk;
+	}
 
 	void Start() { }
-	void Update() { }
+
+	void Update()
+	{
+		if (isWalking)
+		{
+			//move girl
+			Girl.transform.position = Vector3.MoveTowards(Girl.transform.position, walkTarget, 2 * Time.deltaTime);
+			
+			//move camera at half speed
+			cameraTarget.x = Girl.transform.position.x / 2;
+			FollowingCamera.transform.position = cameraTarget;
+			
+			//exit walking
+			if (Girl.transform.position == walkTarget)
+			{
+				setWalking(false);
+				if (State.Instance.ItemToInteract != HouseItemType.None)
+				{
+					grabbedItemDialog();
+				}
+			}
+		}
+		else if (State.Instance.ItemToInteract != HouseItemType.None)
+		{
+			walkToGrab();
+		}
+	}
+	
+	public void OnMouseUp()
+	{
+		walkStart(screenToPoint());
+	}
+
+	/// <summary> moves only in the x direction, not y </summary>
+	void walkToGrab()
+	{
+		float yDelta;
+		Vector3 walkToPoint = screenToPoint(out yDelta);
+		walkStart(walkToPoint);
+		animateGrab(yDelta);
+	}
+
+	void grabbedItemDialog()
+	{
+		TextLibrary.Instance.UpdateDialog(State.Instance.ItemToInteract);
+		State.Instance.ItemToInteract = HouseItemType.None;
+	}
+	
+	void walkStart(Vector3 walkToPoint)
+	{
+		this.walkTarget = walkToPoint;
+		setWalking(true);
+		
+		if (Mathf.Sign(Girl.transform.localScale.x) == Mathf.Sign(walkTarget.x - Girl.transform.position.x))
+		{
+			this.girlController.FlipHorizontally();
+		}
+	}
+	
+	void setWalking(bool isWalkingValue)
+	{
+		this.isWalking = isWalkingValue;
+		animateWalk(isWalkingValue);
+	}
+	
+	/// <returns>The mouse postion.</returns>
+	/// <param name="y">If a y coordinate is given, overwrite the mouse positions y coord.</param>
+	Vector3 screenToPoint()
+	{
+		Vector3 result = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		result.z = 0;
+		return result;
+	}
+	
+	Vector3 screenToPoint(out float yDelta)
+	{
+		Vector3 result = screenToPoint();
+		yDelta = result.y - Girl.transform.position.y;
+		result.y = Girl.transform.position.y;
+		return result;
+	}
 }

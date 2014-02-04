@@ -23,7 +23,7 @@ public class State
 		}
 	}
 
-	/// <summary> Only (so far R44) used to reference the current Girl.CurrentDialog </summary>
+	/// <summary> Only (so far R50) used to reference the current Girl.CurrentDialog </summary>
 	public GirlController Girl {
 		get { return girl; }
 		set {
