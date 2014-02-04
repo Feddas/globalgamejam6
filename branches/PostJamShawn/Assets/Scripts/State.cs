@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public class State
 {
+	public Room SceneCurrent;
+	public Room SceneLast;
+	public HouseItemType ItemToInteract;
+
 	/// <summary> How much of the game the girl has completed so far. Used for keying text and item inventory </summary>
 	public Completion Completed { get; set; }
 
