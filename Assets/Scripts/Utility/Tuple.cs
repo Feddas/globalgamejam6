@@ -101,12 +101,24 @@ public sealed class Tuple<T1, T2>
 		
 		return this == other;
 	}
-	
+
+	//http://msdn.microsoft.com/en-us/library/ms173147(v=vs.80).aspx
 	public static bool operator==(Tuple<T1, T2> a, Tuple<T1, T2> b)
 	{
-		return 
-			a.item1.Equals(b.item1) && 
-				a.item2.Equals(b.item2);            
+		// If both are null, or both are same instance, return true.
+		if (System.Object.ReferenceEquals(a, b))
+		{
+			return true;
+		}
+		
+		// If one is null, but not both, return false.
+		if (((object)a == null) || ((object)b == null))
+		{
+			return false;
+		}
+
+		return a.item1.Equals(b.item1)
+			&& a.item2.Equals(b.item2);
 	}
 
 	private static bool areEqual<T1orT2>(T1orT2 a, T1orT2 b)

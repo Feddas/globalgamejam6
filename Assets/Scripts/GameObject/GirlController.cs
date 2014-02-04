@@ -38,7 +38,14 @@ public class GirlController : MonoBehaviour
 
 			//exit walking
 			if (this.transform.position == walkTarget)
+			{
 				setWalking(false);
+				State.Instance.ItemToInteract = HouseItemType.None;
+			}
+		}
+		else if (State.Instance.ItemToInteract != HouseItemType.None)
+		{
+			walkToGrab();
 		}
 
 		#if UNITY_ANDROID
@@ -52,21 +59,23 @@ public class GirlController : MonoBehaviour
 	#region Walk and grab
 	public void OnClick(dfControl control, dfMouseEventArgs mouseEvent)
 	{
-		if (control.name.StartsWith("Up"))
-			walkToGrab("GrabUp");
-		else if (control.name.StartsWith("Front"))
-			walkToGrab("GrabFront");
-		else if (control.name.StartsWith("Down"))
-			walkToGrab("GrabDown");
-		else if (control.name == "Walk")
-			walkStart(screenToPoint(null));
+		if (control.name == "Walk")
+			walkStart(screenToPoint());
 	}
 
-	//moves only in the x direction, not y
-	void walkToGrab(string grabKey)
+	/// <summary> moves only in the x direction, not y </summary>
+	void walkToGrab()
 	{
-		walkStart(screenToPoint(this.transform.position.y));
-		anim.SetTrigger(grabKey);
+		float yDelta;
+		Vector3 walkToPoint = screenToPoint(out yDelta);
+		walkStart(walkToPoint);
+
+		if (yDelta > 4.8f)
+			anim.SetTrigger("GrabUp");
+		else if (yDelta < 1.0f)
+			anim.SetTrigger("GrabDown");
+		else
+			anim.SetTrigger("GrabFront");
 	}
 
 	void walkStart(Vector3 walkToPoint)
@@ -88,12 +97,18 @@ public class GirlController : MonoBehaviour
 	
 	/// <returns>The mouse postion.</returns>
 	/// <param name="y">If a y coordinate is given, overwrite the mouse positions y coord.</param>
-	Vector3 screenToPoint(float? y)
+	Vector3 screenToPoint()
 	{
 		Vector3 result = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		if (y.HasValue)
-			result.y = y.Value;
 		result.z = 0;
+		return result;
+	}
+
+	Vector3 screenToPoint(out float yDelta)
+	{
+		Vector3 result = screenToPoint();
+		yDelta = result.y - this.transform.position.y;
+		result.y = this.transform.position.y;
 		return result;
 	}
 
