@@ -25,7 +25,11 @@ public class WalkZone : MonoBehaviour
 		this.animateWalk = this.girlController.AnimateWalk;
 	}
 
-	void Start() { }
+	void Start()
+	{
+		//Move camera after Girls position is set from the Awake phase of GirlLocation.Instance.SetPosition().
+		moveCamera();
+	}
 
 	void Update()
 	{
@@ -33,10 +37,8 @@ public class WalkZone : MonoBehaviour
 		{
 			//move girl
 			Girl.transform.position = Vector3.MoveTowards(Girl.transform.position, walkTarget, 2 * Time.deltaTime);
-			
-			//move camera at half speed
-			cameraTarget.x = Girl.transform.position.x / 2;
-			FollowingCamera.transform.position = cameraTarget;
+
+			moveCamera();
 			
 			//exit walking
 			if (Girl.transform.position == walkTarget)
@@ -57,6 +59,13 @@ public class WalkZone : MonoBehaviour
 	public void OnMouseUp()
 	{
 		walkStart(screenToPoint());
+	}
+	
+	private void moveCamera()
+	{
+		//move camera at half speed
+		this.cameraTarget.x = this.Girl.transform.position.x / 2;
+		FollowingCamera.transform.position = cameraTarget;
 	}
 
 	/// <summary> moves only in the x direction, not y </summary>

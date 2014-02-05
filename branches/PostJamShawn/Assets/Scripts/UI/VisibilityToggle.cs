@@ -6,11 +6,7 @@ public class VisibilityToggle : MonoBehaviour
 {
 	public dfControl targetControl;
 
-	void Awake()
-	{
-		if (State.Instance.GameDialog == null)
-			State.Instance.GameDialog = targetControl;
-	}
+	void Awake() { }
 
 	public void OnClick()
 	{

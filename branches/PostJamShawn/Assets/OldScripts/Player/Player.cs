@@ -87,10 +87,10 @@ public class Player : TargetPathingGameObject {
 
 	public void UpdatePlayerLocation(Room fromRoom, Room toRoom)
 	{
-		this.targetPosition = PlayerLocation.Instance.GetPositionInNewScene(fromRoom, toRoom);
+		//this.targetPosition = PlayerLocation.Instance.GetPositionInNewScene(fromRoom, toRoom);
 		this.transform.position = new Vector3(this.targetPosition.x, this.targetPosition.y, 0);
 
-		this.maxWorldXBounding = PlayerLocation.Instance.GetMaxBoundsInScene(toRoom).x;
+		//this.maxWorldXBounding = PlayerLocation.Instance.GetMaxBoundsInScene(toRoom).x;
 	}
 
 	public void PerformPlayerLogic() {

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-//NOTE: sprite sheet uses 372x372
+//NOTE: sprite sheet of Girl uses 372x372 grid cell size
 public class GirlController : MonoBehaviour
 {
 	/// <summary> The exposing of State.CurrentDialog to a game object </summary>
 	public string CurrentDialog { get; set;	}
+
+	public dfControl GameDialog;
 
 	private Animator anim;					// Reference to the player's animator component.
 	
@@ -14,8 +16,12 @@ public class GirlController : MonoBehaviour
 		this.anim = GetComponent<Animator>();
 		State.Instance.Girl = this;
 		
-		State.Instance.Completed = Completion.PlacedUrn;
-		this.CurrentDialog = TextLibrary.Instance.GetTextFor(Room.FrontHouse); //TODO: somehow move this line to GirlLocation.cs
+		//set dialog
+		State.Instance.GameDialog = this.GameDialog;
+		State.Instance.CurrentDialog = TextLibrary.Instance.GetTextFor(State.Instance.SceneCurrent);
+		State.Instance.GameDialog.IsVisible = string.IsNullOrEmpty(State.Instance.CurrentDialog) == false;
+
+		GirlLocation.Instance.SetPosition();
 	}
 
 	void Start() { }
