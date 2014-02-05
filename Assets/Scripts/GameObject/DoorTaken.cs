@@ -13,6 +13,6 @@ public class DoorTaken : MonoBehaviour
 
 		State.Instance.SceneLast = SceneCurrent;
 		State.Instance.SceneCurrent = SceneToChangeTo;
-		//Application.LoadLevel(SceneToChangeTo.ToString());
+		Application.LoadLevel(SceneToChangeTo.ToString());
 	}
 }

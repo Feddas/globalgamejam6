@@ -48,9 +48,7 @@ public class TextLibrary
 		else if (dialogText != TextLibrary.CompletedDialog)
 		{
 			State.Instance.CurrentDialog = dialogText;
-			
-			if (State.Instance.GameDialog != null) //if it is null, it hasn't been closed yet. therefore, it's already visible.
-				State.Instance.GameDialog.IsVisible = true;
+			State.Instance.GameDialog.IsVisible = true;
 		}
 	}
 
