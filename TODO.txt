@@ -1,3 +1,1 @@
-Start screen should have a link to the intro video MacBean made
-Start screen should set State.Instance.Completed = Completion.Start;
-Start screen should give basic controls: Tap floor to move girl around. Tap objects to interact with them.
+Collect FirePoker after urn is placed

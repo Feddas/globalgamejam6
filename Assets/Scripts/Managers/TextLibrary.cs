@@ -16,23 +16,29 @@ public partial class TextLibrary
 
 		//Completion.Start
 		TextHouseItem.Add(Tuple.Create(HouseItemType.FrontCar, Completion.Start), new List<string>{
-			"I'm going to drive out of here right after I place this urn over the fireplace"});
+			"I'm going to drive out of here right after I place this urn over the fireplace."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.FoyerMirror, Completion.Start), new List<string>{
 			"That broken mirror is still here? I wonder why dad wanted to keep bad memories around."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.FoyerChair, Completion.Start), new List<string>{
-			"I always hid behind chair while playing with Liz."});
+			"I always hid behind this chair while playing with Liz."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomUrn, Completion.Start), new List<string>{
 			"Here you go Dad. You have the place all to yourself, just like you wanted."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingSisters, Completion.Start), new List<string>{
 			"I'm almost positive that's my sisters, Liz, old painting. My dad would hate for me to leave it crooked. If only I had something long to help me nudge it back straight."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.Start), new List<string>{
-			"This may help my reach, but first I need to place this Urn down where my father wished, on top of the fireplace."});
+			"I need to place this Urn down where my father wished, on TOP of the fireplace mantle."});
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.Start), new List<string>{
+			"What an ornate looking box."});
 
 		//Completion.PlacedUrn
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.PlacedUrn), new List<string>{
 			"This will make it easy to nudge my sisters painting back into place. My old crazy dad would be proud. Plus This place is even creepier than I remember. I’ll keep this with me...just in case."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.FrontCar, Completion.PlacedUrn), new List<string>{
 			"I did what I came for. Time to put this place, and the past, in the mirror..."});
+		
+		//Completion.CryptexPieces2
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.Start), new List<string>{
+			"That gold disc I picked up earlier fits right in the front lock of this box. I could probably fit 5 discs in there."});
 
 		//Completion.CryptexPieces2
 		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedMirrorShard, Completion.CryptexPieces2), new List<string>{
