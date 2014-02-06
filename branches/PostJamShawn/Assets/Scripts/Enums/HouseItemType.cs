@@ -44,7 +44,7 @@
 	MasterbedMirrorShard,
 	MasterbedPillow1,
 	MasterbedPillow2,
-	MasterbedRug,
 	MasterbedWindow,
-	Urn,
+	LivingroomUrn,  //TODO: re-alphabetize and remove text-less items
+	LockedDoor,
 }
