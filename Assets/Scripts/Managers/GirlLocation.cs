@@ -34,6 +34,8 @@ public class GirlLocation
 		addSpawnLocation(Room.Hallway, Room.Bedroom, 3.6f, -3f);
 		addSpawnLocation(Room.FrontHouse, Room.Foyer, 6.9f, -3f);
 		addSpawnLocation(Room.Foyer, Room.FrontHouse, -6.9f, -3f);
+		addSpawnLocation(Room.Foyer, Room.LivingRoom, 6.9f, -3f);
+		addSpawnLocation(Room.LivingRoom, Room.Foyer, -6.9f, -3f);
 	}
 
 	public void SetPosition()
