@@ -101,14 +101,10 @@ public partial class TextLibrary
 		Completion completed = State.Instance.Completed;
 		var textKey = Tuple.Create(targetRoom, completed);
 		
-		//find closest text to current level of completion
-		while (TextRoom.ContainsKey(textKey) == false)
+		//only use text for exact match to current level of completion
+		if (TextRoom.ContainsKey(textKey) == false)
 		{
-			if ((int)completed == 0)
-				return null;
-			
-			completed = (Completion)((int)completed - 1);
-			textKey.Item2 = completed;
+			return null;
 		}
 		
 		return TextRoom[textKey][0];

@@ -36,8 +36,8 @@ public partial class TextLibrary
 		TextHouseItem.Add(Tuple.Create(HouseItemType.FrontCar, Completion.PlacedUrn), new List<string>{
 			"I did what I came for. Time to put this place, and the past, in the mirror..."});
 		
-		//Completion.CryptexPieces2
-		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.Start), new List<string>{
+		//Completion.CryptexPieces1
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.CryptexPieces1), new List<string>{
 			"That gold disc I picked up earlier fits right in the front lock of this box. I could probably fit 5 discs in there."});
 
 		//Completion.CryptexPieces2

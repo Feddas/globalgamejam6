@@ -85,6 +85,7 @@ GameObject:
   - 212: {fileID: 115840490}
   - 114: {fileID: 115840489}
   - 61: {fileID: 115840488}
+  - 114: {fileID: 115840491}
   m_Layer: 0
   m_Name: LivingroomUrn
   m_TagString: Untagged
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 44
+  HouseItemOf: 44
 --- !u!212 &115840490
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -149,6 +150,17 @@ SpriteRenderer:
   m_SortingLayerID: 4054371741
   m_Sprite: {fileID: 21300000, guid: d5f359193ca395c458db027254eb6de5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .270588249}
+--- !u!114 &115840491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115840486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4763ddb109f02724289d603974573f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &174935134
 Prefab:
   m_ObjectHideFlags: 0
@@ -941,6 +953,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a8fc4ac8b29cb414ea29e3dd84f56e75, type: 2}
+      propertyPath: HouseItemOf
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8fc4ac8b29cb414ea29e3dd84f56e75, type: 2}
   m_RootGameObject: {fileID: 2030917934}
@@ -1148,7 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 12
+  HouseItemOf: 12
 --- !u!212 &1348813726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1259,6 +1275,7 @@ GameObject:
   - 212: {fileID: 1635847147}
   - 114: {fileID: 1635847150}
   - 61: {fileID: 1635847149}
+  - 114: {fileID: 1635847151}
   m_Layer: 0
   m_Name: LivingroomFirePoker
   m_TagString: Untagged
@@ -1296,7 +1313,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1635847146}
   m_LocalRotation: {x: 0, y: 0, z: -.997539639, w: .0701045841}
-  m_LocalPosition: {x: -6.30999994, y: -1.61000001, z: 0}
+  m_LocalPosition: {x: -6.30999994, y: -1.61000001, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2037702971}
@@ -1322,7 +1339,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 17
+  HouseItemOf: 17
+--- !u!114 &1635847151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1635847146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4763ddb109f02724289d603974573f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1700833757
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1518,7 @@ Transform:
   m_Father: {fileID: 1068348008}
 --- !u!65 &1947776689
 BoxCollider:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 6500004, guid: 1bc42d7c75d9a0f47bee799f8d2623af,
     type: 2}
   m_PrefabInternal: {fileID: 174935134}
@@ -1564,6 +1592,7 @@ GameObject:
   - 212: {fileID: 1989948132}
   - 114: {fileID: 1989948134}
   - 61: {fileID: 1989948133}
+  - 114: {fileID: 1989948135}
   m_Layer: 0
   m_Name: LivingroomPaintingSisters
   m_TagString: Untagged
@@ -1627,7 +1656,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 21
+  HouseItemOf: 21
+--- !u!114 &1989948135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1989948130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4763ddb109f02724289d603974573f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2030917934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,7 +1721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 45
+  HouseItemOf: 45
 --- !u!212 &2030917938
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using System.Linq;
 
 public class HouseItem : MonoBehaviour
 {
-	public HouseItemType type = HouseItemType.None;
+	public HouseItemType HouseItemOf = HouseItemType.None;
 
 	/// <summary> When each item can be interacted with </summary>
 	IList<Tuple<HouseItemType,Completion>> CanInteract = new List<Tuple<HouseItemType,Completion>>()
@@ -26,14 +26,14 @@ public class HouseItem : MonoBehaviour
 
 	public void OnMouseDown()
 	{
-		var interactLevel = CanInteract.Where(item => item.Item1 == type).FirstOrDefault();
+		var interactLevel = CanInteract.Where(item => item.Item1 == HouseItemOf).FirstOrDefault();
 		if (interactLevel != null && interactLevel.Item2 <= State.Instance.Completed)
 		{
-			State.Instance.ItemToInteract = type;
+			State.Instance.ItemToInteract = HouseItemOf;
 		}
 		else
 		{
-			TextLibrary.Instance.UpdateDialog(type);
+			TextLibrary.Instance.UpdateDialog(HouseItemOf);
 		}
 	}
 }

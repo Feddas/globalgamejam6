@@ -56,7 +56,7 @@ public class WalkZone : MonoBehaviour
 		}
 	}
 	
-	public void OnMouseUp()
+	public void OnMouseDown()
 	{
 		walkStart(screenToPoint());
 	}
