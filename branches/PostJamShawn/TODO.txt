@@ -1,1 +1,2 @@
-Collect FirePoker after urn is placed
+use CompletionSteps in HouseItem instead of CanInteract
+Drop a codex disc prefab

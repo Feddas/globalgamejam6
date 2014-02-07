@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -145,9 +145,9 @@ public class Player : TargetPathingGameObject {
 			HouseItem houseItemReference = targetObject.GetComponent<HouseItem>();
 			if(houseItemReference != null) {
 				Debug.Log("House item detected");
-				Debug.Log("House Type: " + houseItemReference.type);
+				Debug.Log("House Type: " + houseItemReference.HouseItemOf);
 				
-				if(houseItemReference.type == HouseItemType.LivingroomFireplaceMantle) {
+				if(houseItemReference.HouseItemOf == HouseItemType.LivingroomFireplaceMantle) {
 					if(Player.Instance.urn == CarriedItemsState.Carrying) {
 						Instantiate(Resources.Load("Prefabs/Urn") as GameObject);
 						Player.Instance.urn = CarriedItemsState.Used;

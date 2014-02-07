@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 26
+  HouseItemOf: 26
 --- !u!212 &1348813726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1317,7 +1317,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1635847146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3514297, y: -3.39716125, z: 0}
+  m_LocalPosition: {x: -1.3514297, y: -3.39716125, z: -1}
   m_LocalScale: {x: 1.94419467, y: 1.94419539, z: 1}
   m_Children: []
   m_Father: {fileID: 2037702971}
@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 24
+  HouseItemOf: 24
 --- !u!1001 &1653585203
 Prefab:
   m_ObjectHideFlags: 0
@@ -1378,6 +1378,10 @@ Prefab:
     - target: {fileID: 400000, guid: a8fc4ac8b29cb414ea29e3dd84f56e75, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a8fc4ac8b29cb414ea29e3dd84f56e75, type: 2}
+      propertyPath: HouseItemOf
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a8fc4ac8b29cb414ea29e3dd84f56e75, type: 2}
@@ -1656,7 +1660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 45
+  HouseItemOf: 45
 --- !u!212 &1954725557
 SpriteRenderer:
   m_ObjectHideFlags: 0

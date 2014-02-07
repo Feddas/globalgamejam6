@@ -5,7 +5,16 @@ public class StartMenu : MonoBehaviour
 {
 	public GameObject FrontDoor;
 
-	void Start() { }
+	void Start()
+	{
+		if (State.Instance.Completed == Completion.None)
+		{
+			var startMenu = this.GetComponent<dfPanel>();
+			startMenu.IsVisible = true;
+			FrontDoor.SetActive(false);
+		}
+	}
+
 	void Update() { }
 
 	public void OnClick( dfControl control, dfMouseEventArgs mouseEvent )
