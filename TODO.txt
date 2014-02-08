@@ -1,2 +1,9 @@
-use CompletionSteps in HouseItem instead of CanInteract
-Drop a codex disc prefab
+Drop animation to codex disc
+Unlock hallway
+
+Consider changing OnMouseDown to use http://www.fugutalk.com/?p=6074 if need to detect multiple houseitems
+real Mathf.Lerp info: http://answers.unity3d.com/questions/237294/how-the-heck-does-mathflerp-work.html
+
+Differences from GameJam:
+- firepoker used to get first Cyptex instead of open attic
+- 1 pillow misplaced instead of 2

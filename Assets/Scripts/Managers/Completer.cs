@@ -32,9 +32,11 @@ public class Completer : MonoBehaviour
 			{
 			case HouseItemType.LivingroomUrn:
 			case HouseItemType.LivingroomFirePoker:
-			case HouseItemType.LivingroomPaintingSisters:
-			default:				
+			default:
 				myStep.ActionOnCompletion = fadeInit;
+				break;
+			case HouseItemType.LivingroomPaintingSisters:
+				myStep.ActionOnCompletion = paintingSisters;
 				break;
 			}
 		}
@@ -64,6 +66,15 @@ public class Completer : MonoBehaviour
 	}
 
 	#region completer effects
+	private void paintingSisters(int arg)
+	{
+		foreach (Transform child in this.transform)
+		{
+			this.sprite = child.GetComponent<SpriteRenderer>(); //this is CryptexPiece1
+			fadeInit(1);
+		}
+	}
+
 	private void fadeInit(int fadeDirection)
 	{
 		color = this.sprite.color;

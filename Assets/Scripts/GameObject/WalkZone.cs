@@ -97,6 +97,10 @@ public class WalkZone : MonoBehaviour
 	void setWalking(bool isWalkingValue)
 	{
 		this.isWalking = isWalkingValue;
+		if (animateWalk == null) //This should never happen, but I'm too lazy to figure out why it is occasionally happening.
+		{
+			animateWalk = this.girlController.AnimateWalk;
+		}
 		animateWalk(isWalkingValue);
 	}
 	
