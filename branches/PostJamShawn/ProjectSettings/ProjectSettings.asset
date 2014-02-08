@@ -75,7 +75,7 @@ PlayerSettings:
     Others: 1
   iPhoneBundleIdentifier: com.GGJ2014.BrokenHome
   productGUID: ca48a2a122c43d343b36a8c7875a7ffa
-  iPhoneBundleVersion: 0.5
+  iPhoneBundleVersion: 0.6
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1

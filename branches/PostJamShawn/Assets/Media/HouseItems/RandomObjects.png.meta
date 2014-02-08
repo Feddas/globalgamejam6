@@ -63,13 +63,13 @@ TextureImporter:
         height: 216
       alignment: 0
       pivot: {x: .5, y: .5}
-    - name: CodexPiece
+    - name: CryptexPiece
       rect:
         serializedVersion: 2
         x: 276
-        y: 97
-        width: 151
-        height: 117
+        y: 96
+        width: 150
+        height: 118
       alignment: 0
       pivot: {x: .5, y: .5}
   spritePackingTag: 

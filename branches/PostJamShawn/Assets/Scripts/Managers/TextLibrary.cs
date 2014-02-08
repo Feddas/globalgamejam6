@@ -24,7 +24,7 @@ public partial class TextLibrary
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomUrn, Completion.Start), new List<string>{
 			"Here you go Dad. You have the place all to yourself, just like you wanted."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingSisters, Completion.Start), new List<string>{
-			"I'm almost positive that's my sisters, Liz, old painting. My dad would hate for me to leave it crooked. If only I had something long to help me nudge it back straight."});
+			"I'm almost positive that's my sisters, Liz, old painting. My dad would hate for me to leave it crooked. If only I had something long to help me get it back on it's second hook."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.Start), new List<string>{
 			"I need to place this Urn down where my father wished, on TOP of the fireplace mantle."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.Start), new List<string>{
@@ -32,11 +32,21 @@ public partial class TextLibrary
 
 		//Completion.PlacedUrn
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.PlacedUrn), new List<string>{
-			"This will make it easy to nudge my sisters painting back into place. My old crazy dad would be proud. Plus This place is even creepier than I remember. I’ll keep this with me...just in case."});
+			"This firepoker will make it easy to get my sisters painting back into place. My old crazy dad would be proud. Plus This place is even creepier than I remember. I’ll keep this with me...just in case."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.FrontCar, Completion.PlacedUrn), new List<string>{
 			"I did what I came for. Time to put this place, and the past, in the mirror..."});
-		
+
+		//Completion.HaveFirePoker
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingSisters, Completion.HaveFirePoker), new List<string>{
+			"There, much better. What was that sound? That nail must have been hooked on something weird behind the wall."});
+
+		//Completion.FixedPainting
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.FixedPainting), new List<string>{ //Firepoker is now gone
+			"I'm no Cinderella, I am not cleaning that fireplace out."});
+
 		//Completion.CryptexPieces1
+		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingSisters, Completion.CryptexPieces1), new List<string>{
+			"I wonder if my sister painted this house."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.CryptexPieces1), new List<string>{
 			"That gold disc I picked up earlier fits right in the front lock of this box. I could probably fit 5 discs in there."});
 

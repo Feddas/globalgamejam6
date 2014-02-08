@@ -47,4 +47,9 @@
 	MasterbedWindow,
 	LivingroomUrn,  //TODO: re-alphabetize and remove text-less items
 	LockedDoor,
+	Cryptex1Livingroom,
+	Cryptex2Hallway,
+	Cryptex3Masterbed,
+	Cryptex4MirrorShard,
+	Cryptex5Attic,
 }
