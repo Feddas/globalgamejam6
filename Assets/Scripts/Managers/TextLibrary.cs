@@ -43,10 +43,12 @@ public partial class TextLibrary
 		//Completion.FixedPainting
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.FixedPainting), new List<string>{ //Firepoker is now gone
 			"I'm no Cinderella, I am not cleaning that fireplace out."});
+		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex1Livingroom, Completion.FixedPainting), new List<string>{
+			"This is an odd looking disc. It has the letters A through Z around its edge."});
 
 		//Completion.CryptexPieces1
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingSisters, Completion.CryptexPieces1), new List<string>{
-			"I wonder if my sister painted this house."});
+			"I wonder when my sister even found the time to make this painting."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.CryptexPieces1), new List<string>{
 			"That gold disc I picked up earlier fits right in the front lock of this box. I could probably fit 5 discs in there."});
 
@@ -87,5 +89,8 @@ public partial class TextLibrary
 		TextRoom.Add(Tuple.Create(Room.FrontHouse, Completion.Start), new List<string>{
 @"It's been so long since I've been home. I hardly remember this place, but Dad wanted his ashes placed over the mantle. I'll just put them there and leave.
 Strange to have an unfinished inscription on the urn though. All it says is, ""YOU ARE""."});
+		
+		TextRoom.Add(Tuple.Create(Room.Bedroom, Completion.CryptexPieces1), new List<string>{
+			@"That creaking sound, did that come from the hallway?"});
 	}
 }

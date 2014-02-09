@@ -1,9 +1,14 @@
-Drop animation to codex disc
-Unlock hallway
+In Completer.cs use Fade() in HouseItem.cs instead of Completer.cs
+increment completed step after entering bedroom.
 
+Polish:
+Drop animation to codex disc?
+credits on start menu?
 Consider changing OnMouseDown to use http://www.fugutalk.com/?p=6074 if need to detect multiple houseitems
-real Mathf.Lerp info: http://answers.unity3d.com/questions/237294/how-the-heck-does-mathflerp-work.html
 
 Differences from GameJam:
 - firepoker used to get first Cyptex instead of open attic
 - 1 pillow misplaced instead of 2
+
+Documentation:
+real Mathf.Lerp info: http://answers.unity3d.com/questions/237294/how-the-heck-does-mathflerp-work.html

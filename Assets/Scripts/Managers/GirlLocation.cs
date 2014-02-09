@@ -29,13 +29,16 @@ public class GirlLocation
 	#endregion singleton
 	
 	private GirlLocation() {
-		addSpawnLocation(Room.Hallway, Room.Attic, -2.5f, -3f);
-		addSpawnLocation(Room.Hallway, Room.Masterbed, -4.4f, -3.6f);
-		addSpawnLocation(Room.Hallway, Room.Bedroom, 3.6f, -3f);
 		addSpawnLocation(Room.FrontHouse, Room.Foyer, 6.9f, -3f);
 		addSpawnLocation(Room.Foyer, Room.FrontHouse, -6.9f, -3f);
 		addSpawnLocation(Room.Foyer, Room.LivingRoom, 6.9f, -3f);
 		addSpawnLocation(Room.LivingRoom, Room.Foyer, -6.9f, -3f);
+
+		//Opened up after Completed.CryptexPieces1
+		addSpawnLocation(Room.Foyer, Room.Hallway, 0f, -3.5f);
+		addSpawnLocation(Room.Hallway, Room.Foyer, -4f, -3f);
+		addSpawnLocation(Room.Hallway, Room.Bedroom, 6.9f, -3f);
+		addSpawnLocation(Room.Bedroom, Room.Hallway, -6.9f, -2f);
 	}
 
 	public void SetPosition()
