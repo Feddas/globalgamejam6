@@ -52,4 +52,5 @@
 	Cryptex3Masterbed,
 	Cryptex4MirrorShard,
 	Cryptex5Attic,
+	LivingroomPaintingStraight,
 }

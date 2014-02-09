@@ -9,14 +9,15 @@ public class Completer : MonoBehaviour
 
 	private SpriteRenderer sprite;
 	private Color color;
-	private float weight, lerpFrom, lerpTo, lerpSpeed = 0.3f;
+	private float weight, lerpFrom, lerpTo, lerpSpeed = 0.5f;
 	private delegate void Action();
 	private Action action;
 	public static IList<CompletionStep> CompletionSteps = new List<CompletionStep>()
 	{
 		new CompletionStep(Completion.Start, HouseItemType.LivingroomUrn, 1),
 		new CompletionStep(Completion.PlacedUrn, HouseItemType.LivingroomFirePoker, -1),
-		new CompletionStep(Completion.HaveFirePoker, HouseItemType.LivingroomPaintingSisters, -1),
+		new CompletionStep(Completion.HaveFirePoker, HouseItemType.LivingroomPaintingSisters, 0),
+		new CompletionStep(Completion.FixedPainting, HouseItemType.Cryptex1Livingroom, -1),
 	};
 
 	void Awake()
@@ -36,6 +37,7 @@ public class Completer : MonoBehaviour
 			{
 			case HouseItemType.LivingroomUrn:
 			case HouseItemType.LivingroomFirePoker:
+			case HouseItemType.Cryptex1Livingroom:
 			default:
 				myStep.ActionOnCompletion = fadeInit;
 				break;
@@ -72,10 +74,13 @@ public class Completer : MonoBehaviour
 	#region completer effects
 	private void paintingSisters(int arg)
 	{
+		fadeInit(0); //hide the rotated painting
+
+		//Show the children, CryptexPiece1 and the straightened painting
 		foreach (Transform child in this.transform)
 		{
-			this.sprite = child.GetComponent<SpriteRenderer>(); //this is CryptexPiece1
-			fadeInit(1);
+			var childHouseItem = child.GetComponent<HouseItem>();
+			childHouseItem.Fade(1);
 		}
 	}
 
@@ -93,7 +98,10 @@ public class Completer : MonoBehaviour
 			Color newColor = this.color;
 			newColor.a = lerpTo;
 			//Debug.Log(fadedItem + " added to NewItemColor " + newColor.a);
-			State.Instance.NewItemColor.Add(fadedItem, newColor);
+			if (State.Instance.NewItemColor.ContainsKey(fadedItem)) //overwrite it
+				State.Instance.NewItemColor[fadedItem] = newColor;
+			else
+				State.Instance.NewItemColor.Add(fadedItem, newColor);
 		}
 	}
 
@@ -112,8 +120,3 @@ public class Completer : MonoBehaviour
 	}
 	#endregion completer effects
 }
-
-//public class CompleterEffects()
-//{
-//	public Color ColorRenderer { get; set; }
-//}
