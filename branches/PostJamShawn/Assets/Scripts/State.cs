@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class State
 {
@@ -36,7 +37,7 @@ public class State
 	#endregion display game dialog
 
 	#region item state
-	//public Dictionary<HouseItemType, Color> NewItemColor = new Dictionary<HouseItemType, Color>(); //TODO: use this instead of Completer.cs's NewVisibility
+	public Dictionary<HouseItemType, Nullable<Color>> NewItemColor = new Dictionary<HouseItemType, Color?>(); //TODO: use this instead of Completer.cs's NewVisibility
 	private Dictionary<Tuple<HouseItemType, Completion>, int> itemInteractions = new Dictionary<Tuple<HouseItemType, Completion>, int>();
 	public int GetItemState(Tuple<HouseItemType, Completion> targetItem)
 	{
