@@ -19,31 +19,12 @@ public class Completer : MonoBehaviour
 		new CompletionStep(Completion.HaveFirePoker, HouseItemType.LivingroomPaintingSisters, -1),
 	};
 
-	public static IList<CompletionStep> NewVisibility = new List<CompletionStep>();
-
 	void Awake()
 	{
 		this.houseItem = this.GetComponent<HouseItem>().HouseItemOf;
 		this.sprite = this.GetComponent<SpriteRenderer>();
 
-		if (usingNewVisiblity())
-			return;
-		else
-			setInteractionEffects();
-	}
-
-	/// <summary> returns a houseitem to the alpha it was set to after a player interaction. so items don't regress to a previous state after switching rooms </summary>
-	private bool usingNewVisiblity()
-	{
-		var newVisibility = NewVisibility.Where(item => item.HouseItemRequired == this.houseItem).FirstOrDefault();
-		if (newVisibility != null)
-		{
-			color = this.sprite.color;
-			this.color.a = (float)newVisibility.ActionArgument;
-			this.sprite.color = this.color;
-			return true; //this return assumes a houseItem is only interacted with once
-		}
-		return false;
+		setInteractionEffects();
 	}
 
 	private void setInteractionEffects()
@@ -105,8 +86,15 @@ public class Completer : MonoBehaviour
 		lerpFrom = color.a;
 		lerpTo = (fadeDirection > 0 ? 1f : 0f); //set desired alpha value
 		action = fade;
-		if (this.sprite == this.GetComponent<SpriteRenderer>())
-			NewVisibility.Add(new CompletionStep(State.Instance.Completed, this.houseItem, (int)lerpTo));
+
+		var fadedItem = this.sprite.GetComponent<HouseItem>().HouseItemOf;
+		if (fadedItem != HouseItemType.None)
+		{
+			Color newColor = this.color;
+			newColor.a = lerpTo;
+			//Debug.Log(fadedItem + " added to NewItemColor " + newColor.a);
+			State.Instance.NewItemColor.Add(fadedItem, newColor);
+		}
 	}
 
 	private void fade()
@@ -124,3 +112,8 @@ public class Completer : MonoBehaviour
 	}
 	#endregion completer effects
 }
+
+//public class CompleterEffects()
+//{
+//	public Color ColorRenderer { get; set; }
+//}
