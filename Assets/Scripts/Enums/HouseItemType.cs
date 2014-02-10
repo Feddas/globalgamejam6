@@ -43,7 +43,7 @@
 	MasterbedMirror,  //NOT USED
 	MasterbedMirrorShard,
 	MasterbedPillow1,
-	MasterbedPillow2,
+	MasterbedPillow2,  //NOT USED
 	MasterbedWindow,  //NOT USED
 	LivingroomUrn,  //TODO: re-alphabetize and remove text-less items
 	LockedDoor,
