@@ -5,54 +5,50 @@ using System.Linq;
 
 public class Completer : MonoBehaviour
 {
-	private HouseItemType houseItem;
+	private HouseItem houseItem;
 
-	private SpriteRenderer sprite;
-	private Color color;
-	private float weight, lerpFrom, lerpTo, lerpSpeed = 0.5f;
-	private delegate void Action();
-	private Action action;
 	public static IList<CompletionStep> CompletionSteps = new List<CompletionStep>()
 	{
 		new CompletionStep(Completion.Start, HouseItemType.LivingroomUrn, 1),
 		new CompletionStep(Completion.PlacedUrn, HouseItemType.LivingroomFirePoker, -1),
 		new CompletionStep(Completion.HaveFirePoker, HouseItemType.LivingroomPaintingSisters, 0),
 		new CompletionStep(Completion.FixedPainting, HouseItemType.Cryptex1Livingroom, -1),
+		new CompletionStep(Completion.HallwayFloorBoard, HouseItemType.Cryptex2Hallway, -1),
 	};
 
 	void Awake()
 	{
-		this.houseItem = this.GetComponent<HouseItem>().HouseItemOf;
-		this.sprite = this.GetComponent<SpriteRenderer>();
+		this.houseItem = this.GetComponent<HouseItem>();
 
 		setInteractionEffects();
 	}
+	
+	void Start() { }
+	void Update() { }
 
+	/// <summary>
+	/// Sets the ActionOnCompletion delegate which is used to show an effect such as a fade or rotation when a houseItem is interacted with
+	/// </summary>
 	private void setInteractionEffects()
 	{
 		//set the action for the steps referencing this HouseItem
-		foreach (var myStep in CompletionSteps.Where(step => step.HouseItemRequired == this.houseItem))
+		foreach (var myStep in CompletionSteps.Where(step => step.HouseItemRequired == this.houseItem.HouseItemOf))
 		{
-			switch (this.houseItem)
+			switch (this.houseItem.HouseItemOf)
 			{
 			case HouseItemType.LivingroomUrn:
 			case HouseItemType.LivingroomFirePoker:
 			case HouseItemType.Cryptex1Livingroom:
-			default:
-				myStep.ActionOnCompletion = fadeInit;
+			case HouseItemType.Cryptex2Hallway:
+				myStep.ActionOnCompletion = this.houseItem.Fade;
 				break;
 			case HouseItemType.LivingroomPaintingSisters:
 				myStep.ActionOnCompletion = paintingSisters;
 				break;
+			default:
+				throw new UnityException("Completer.cs/setInteractionEffects() does not have a case for " + this.houseItem.HouseItemOf);
 			}
 		}
-	}
-
-	void Start() { }
-	void Update()
-	{
-		if (action != null)
-			action();
 	}
 
 	public void OnMouseDown()
@@ -61,7 +57,7 @@ public class Completer : MonoBehaviour
 		foreach (var completionStep in CompletionSteps)
 		{
 			if (State.Instance.Completed == completionStep.StepToStart
-			    && houseItem == completionStep.HouseItemRequired)
+			    && houseItem.HouseItemOf == completionStep.HouseItemRequired)
 			{
 				State.Instance.Completed++; //step fulfilled, increment to next step
 				completionStep.ActionOnCompletion(completionStep.ActionArgument);
@@ -74,48 +70,18 @@ public class Completer : MonoBehaviour
 	#region completer effects
 	private void paintingSisters(int arg)
 	{
-		fadeInit(0); //hide the rotated painting
+		this.houseItem.Fade(0); //hide the rotated painting
 
 		//Show the children, CryptexPiece1 and the straightened painting
-		foreach (Transform child in this.transform)
+		FadeInChildren(this.transform);
+	}
+
+	public static void FadeInChildren(Transform parentTransform)
+	{
+		foreach (Transform child in parentTransform)
 		{
 			var childHouseItem = child.GetComponent<HouseItem>();
 			childHouseItem.Fade(1);
-		}
-	}
-
-	private void fadeInit(int fadeDirection)
-	{
-		color = this.sprite.color;
-		weight = 0;
-		lerpFrom = color.a;
-		lerpTo = (fadeDirection > 0 ? 1f : 0f); //set desired alpha value
-		action = fade;
-
-		var fadedItem = this.sprite.GetComponent<HouseItem>().HouseItemOf;
-		if (fadedItem != HouseItemType.None)
-		{
-			Color newColor = this.color;
-			newColor.a = lerpTo;
-			//Debug.Log(fadedItem + " added to NewItemColor " + newColor.a);
-			if (State.Instance.NewItemColor.ContainsKey(fadedItem)) //overwrite it
-				State.Instance.NewItemColor[fadedItem] = newColor;
-			else
-				State.Instance.NewItemColor.Add(fadedItem, newColor);
-		}
-	}
-
-	private void fade()
-	{
-		//increment the fade
-		this.weight += Time.deltaTime * lerpSpeed;
-		this.color.a = Mathf.Lerp(lerpFrom, lerpTo, weight);
-		this.sprite.color = this.color;
-
-		//end the fade
-		if (weight > 0.98f)
-		{
-			action = null;
 		}
 	}
 	#endregion completer effects
