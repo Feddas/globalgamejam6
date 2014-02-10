@@ -32,7 +32,7 @@ public partial class TextLibrary
 
 		//Completion.PlacedUrn
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.PlacedUrn), new List<string>{
-			"This firepoker will make it easy to get my sisters painting back into place. My old crazy dad would be proud. Plus This place is even creepier than I remember. I’ll keep this with me...just in case."});
+			"This firepoker will make it easy to get my sisters painting back into place. My old crazy dad would be proud. Plus, this place is even creepier than I remember. I’ll keep this with me...just in case."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.FrontCar, Completion.PlacedUrn), new List<string>{
 			"I did what I came for. Time to put this place, and the past, in the mirror..."});
 
@@ -51,10 +51,24 @@ public partial class TextLibrary
 			"I wonder when my sister even found the time to make this painting."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.CryptexPieces1), new List<string>{
 			"That gold disc I picked up earlier fits right in the front lock of this box. I could probably fit 5 discs in there."});
+		
+		//Completion.HallwayFloorBoard
+		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex2Hallway, Completion.HallwayFloorBoard), new List<string>{
+			"Did this just fall from the ceiling while I was in the Bedroom?! Seems like the only fixing dad did was in making this place haunted."});
 
 		//Completion.CryptexPieces2
 		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedMirrorShard, Completion.CryptexPieces2), new List<string>{
-			"I can see my reflection in this shard of glass. I should clean up this room before I chance getting bloody."});
+			"This shard of glass looks sharp. I should clean up this room before I chance getting bloody."});
+		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedPillow1, Completion.CryptexPieces2), new List<string>{
+			"My dad was never one to leave things tidy."});
+
+		//Completion.PillowsPlaced
+		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex2Hallway, Completion.PillowsPlaced), new List<string>{
+			"Well looky here, another golden disc was under that pillow. That's 3 of 'em."});
+
+		//Completion.CyptexPieces3
+		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedMirrorShard, Completion.CyrptexPieces3), new List<string>{
+			"I can see my reflection in this shard of glass."});
 
 //		TextHouseItem.Add(Tuple.Create(HouseItemType.AtticBoxes, Completion.None), new List<string>{
 //			"These are filled with Liz’s old stuff…"});
@@ -91,6 +105,10 @@ public partial class TextLibrary
 Strange to have an unfinished inscription on the urn though. All it says is, ""YOU ARE""."});
 		
 		TextRoom.Add(Tuple.Create(Room.Bedroom, Completion.CryptexPieces1), new List<string>{
-			@"That creaking sound, did that come from the hallway?"});
+			@"This place sure is creaky. I just hope the floor or ceiling don't fall out."});
+		TextRoom.Add(Tuple.Create(Room.Bedroom, Completion.CryptexPieces2), new List<string>{
+			@"More things are sure to fall from the ceiling just by stepping in my old bedroom."});
+		TextRoom.Add(Tuple.Create(Room.Hallway, Completion.CryptexPieces2), new List<string>{
+			@"...or new doors unlock."});
 	}
 }

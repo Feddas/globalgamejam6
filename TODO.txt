@@ -1,5 +1,5 @@
-In Completer.cs use Fade() in HouseItem.cs instead of Completer.cs
-increment completed step after entering bedroom.
+Have pillow1 move to pillow2
+pickup cryptex3
 
 Polish:
 Drop animation to codex disc?

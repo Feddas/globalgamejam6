@@ -22,6 +22,8 @@ public class GirlController : MonoBehaviour
 		State.Instance.GameDialog.IsVisible = string.IsNullOrEmpty(State.Instance.CurrentDialog) == false;
 
 		GirlLocation.Instance.SetPosition();
+		if (this.transform.position.x < -6)
+			FlipHorizontally();
 	}
 
 	void Start() { }

@@ -7,44 +7,44 @@
 	AtticJunk,
 	AtticRockingHorse,
 	AtticWindow,
-	BedroomBed,
-	BedroomDresser,
-	BedroomNightstand,
-	BedroomPainting,
-	BedroomWindow,
+	BedroomBed,  //NOT USED
+	BedroomDresser,  //NOT USED
+	BedroomNightstand,  //NOT USED
+	BedroomPainting,  //NOT USED
+	BedroomWindow,  //NOT USED
 	FrontCar,
 	LivingroomCodex,
-	LivingroomCouch,
-	LivingroomDoorLockedKitchen,
-	LivingroomEndTable,
-	LivingroomFireplaceMantle,
+	LivingroomCouch,  //NOT USED
+	LivingroomDoorLockedKitchen,  //NOT USED
+	LivingroomEndTable,  //NOT USED
+	LivingroomFireplaceMantle,  //NOT USED
 	LivingroomFirePoker,
-	LivingroomPaintingByKitchenDoor,
-	LivingroomPaintingFireplace,
-	LivingroomPaintingsCreepy,
+	LivingroomPaintingByKitchenDoor,  //NOT USED
+	LivingroomPaintingFireplace,  //NOT USED
+	LivingroomPaintingsCreepy,  //NOT USED
 	LivingroomPaintingSisters,
-	LivingroomTable,
-	FoyerArmoire,
+	LivingroomTable,  //NOT USED
+	FoyerArmoire,  //NOT USED
 	FoyerChair,
-	FoyerCoatRack,
+	FoyerCoatRack,  //NOT USED
 	FoyerMirror,
-	FoyerUmbrellas,
-	DoorAttic,
-	DoorBedroom,
-	DoorFront,
-	DoorLivingroom,
-	DoorMasterbed,
-	DoorStairs,
-	Floor,
-	HallDoorLockedBathroom,
-	HallFloorboard,
-	MasterbedBed,
-	MasterbedDresser,
-	MasterbedMirror,
+	FoyerUmbrellas,  //NOT USED
+	DoorAttic,  //NOT USED
+	DoorBedroom,  //NOT USED
+	DoorFront,  //NOT USED
+	DoorLivingroom,  //NOT USED
+	DoorMasterbed,  //NOT USED
+	DoorStairs,  //NOT USED
+	Floor,  //NOT USED
+	HallDoorLockedBathroom,  //NOT USED
+	HallFloorboard,  //NOT USED
+	MasterbedBed,  //NOT USED
+	MasterbedDresser,  //NOT USED
+	MasterbedMirror,  //NOT USED
 	MasterbedMirrorShard,
 	MasterbedPillow1,
 	MasterbedPillow2,
-	MasterbedWindow,
+	MasterbedWindow,  //NOT USED
 	LivingroomUrn,  //TODO: re-alphabetize and remove text-less items
 	LockedDoor,
 	Cryptex1Livingroom,
