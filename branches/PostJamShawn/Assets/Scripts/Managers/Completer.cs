@@ -14,6 +14,7 @@ public class Completer : MonoBehaviour
 		new CompletionStep(Completion.HaveFirePoker, HouseItemType.LivingroomPaintingSisters, 0),
 		new CompletionStep(Completion.FixedPainting, HouseItemType.Cryptex1Livingroom, -1),
 		new CompletionStep(Completion.HallwayFloorBoard, HouseItemType.Cryptex2Hallway, -1),
+		new CompletionStep(Completion.CryptexPieces2, HouseItemType.MasterbedPillow1, 0),
 	};
 
 	void Awake()
@@ -45,6 +46,9 @@ public class Completer : MonoBehaviour
 			case HouseItemType.LivingroomPaintingSisters:
 				myStep.ActionOnCompletion = paintingSisters;
 				break;
+			case HouseItemType.MasterbedPillow1:
+				myStep.ActionOnCompletion = pillowPickup;
+				break;
 			default:
 				throw new UnityException("Completer.cs/setInteractionEffects() does not have a case for " + this.houseItem.HouseItemOf);
 			}
@@ -68,6 +72,23 @@ public class Completer : MonoBehaviour
 	}
 
 	#region completer effects
+	private void pillowPickup(int arg)
+	{
+		this.GetComponent<Animator>().SetTrigger("PillowPickup");
+
+		//save end transform after animation for room re-entry. http://answers.unity3d.com/questions/454523/component-without-gameobject.html
+		var objectForTransform = new GameObject() { name = "Position" + this.houseItem.HouseItemOf };
+		DontDestroyOnLoad(objectForTransform);
+		Transform newTransform = objectForTransform.transform;
+		newTransform.position = new Vector3(8f, -1f, 0f);
+		newTransform.localScale = new Vector3(-1f, 1f, 1f);
+
+		if (State.Instance.NewItemTransform.ContainsKey(this.houseItem.HouseItemOf)) //overwrite it
+			State.Instance.NewItemTransform[this.houseItem.HouseItemOf] = newTransform;
+		else
+			State.Instance.NewItemTransform.Add(this.houseItem.HouseItemOf, newTransform);
+	}
+
 	private void paintingSisters(int arg)
 	{
 		this.houseItem.Fade(0); //hide the rotated painting

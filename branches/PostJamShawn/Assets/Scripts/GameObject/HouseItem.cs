@@ -10,6 +10,7 @@ public class HouseItem : MonoBehaviour
 	void Awake()
 	{
 		useUpdatedVisiblity();
+		useUpdatedTransform();
 	}
 
 	void Start() { }
@@ -48,6 +49,26 @@ public class HouseItem : MonoBehaviour
 		if (newVisibility.HasValue)
 		{
 			this.GetComponent<SpriteRenderer>().color = newVisibility.Value;
+		}
+	}
+
+	private void useUpdatedTransform()
+	{
+		if (State.Instance.NewItemTransform.Count == 0)
+			return;
+
+		var newTransform = State.Instance.NewItemTransform
+			.Where(item => item.Key == this.HouseItemOf)
+			.FirstOrDefault().Value;
+
+		if (newTransform != null)
+		{
+			//Animator locks the postion even when "Apply Root Motion" is unchecked
+			Destroy(this.GetComponent<Animator>());
+
+			this.gameObject.transform.position = newTransform.position;
+			//this.transform.rotation = newTransform.rotation; //not needed yet, not tested
+			this.gameObject.transform.localScale = newTransform.localScale;
 		}
 	}
 

@@ -63,12 +63,17 @@ public partial class TextLibrary
 			"My dad was never one to leave things tidy."});
 
 		//Completion.PillowsPlaced
-		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex2Hallway, Completion.PillowsPlaced), new List<string>{
-			"Well looky here, another golden disc was under that pillow. That's 3 of 'em."});
+		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedPillow1, Completion.PillowsPlaced), new List<string>{
+			"Well looky here, another golden disc was under that pillow."});
+		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex3Masterbed, Completion.PillowsPlaced), new List<string>{
+			"That's 3 of 'em. I'm getting the feeling Dad wanted me to find these."});
 
 		//Completion.CyptexPieces3
 		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedMirrorShard, Completion.CyrptexPieces3), new List<string>{
 			"I can see my reflection in this shard of glass."});
+
+		//Completion.HaveMirrorShard
+
 
 //		TextHouseItem.Add(Tuple.Create(HouseItemType.AtticBoxes, Completion.None), new List<string>{
 //			"These are filled with Liz’s old stuff…"});
@@ -105,7 +110,7 @@ public partial class TextLibrary
 Strange to have an unfinished inscription on the urn though. All it says is, ""YOU ARE""."});
 		
 		TextRoom.Add(Tuple.Create(Room.Bedroom, Completion.CryptexPieces1), new List<string>{
-			@"This place sure is creaky. I just hope the floor or ceiling don't fall out."});
+			@"This place sure is creaky. I just hope the floor or ceiling doesn't fall out."});
 		TextRoom.Add(Tuple.Create(Room.Bedroom, Completion.CryptexPieces2), new List<string>{
 			@"More things are sure to fall from the ceiling just by stepping in my old bedroom."});
 		TextRoom.Add(Tuple.Create(Room.Hallway, Completion.CryptexPieces2), new List<string>{
