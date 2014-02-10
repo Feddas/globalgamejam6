@@ -26,3 +26,4 @@ public enum Completion
 	HaveCryptex,
 	CryptexPhotoViewed,
 }
+//TODO: rename CryptexPieces1 to HouseItemType names; ie Cryptes1LivingRoom

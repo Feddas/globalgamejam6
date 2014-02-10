@@ -11,10 +11,14 @@ public class Completer : MonoBehaviour
 	{
 		new CompletionStep(Completion.Start, HouseItemType.LivingroomUrn, 1),
 		new CompletionStep(Completion.PlacedUrn, HouseItemType.LivingroomFirePoker, -1),
-		new CompletionStep(Completion.HaveFirePoker, HouseItemType.LivingroomPaintingSisters, 0),
+		new CompletionStep(Completion.HaveFirePoker, HouseItemType.LivingroomPaintingSisters, -1),
 		new CompletionStep(Completion.FixedPainting, HouseItemType.Cryptex1Livingroom, -1),
 		new CompletionStep(Completion.HallwayFloorBoard, HouseItemType.Cryptex2Hallway, -1),
 		new CompletionStep(Completion.CryptexPieces2, HouseItemType.MasterbedPillow1, 0),
+		new CompletionStep(Completion.PillowsPlaced, HouseItemType.Cryptex3Masterbed, -1),
+		new CompletionStep(Completion.CyrptexPieces3, HouseItemType.MasterbedMirrorShard, -1),
+		new CompletionStep(Completion.HaveMirrorShard, HouseItemType.FoyerMirror, 1),
+		new CompletionStep(Completion.MirrorShardUsed, HouseItemType.Cryptex4MirrorShard, -1),
 	};
 
 	void Awake()
@@ -32,7 +36,7 @@ public class Completer : MonoBehaviour
 	/// </summary>
 	private void setInteractionEffects()
 	{
-		//set the action for the steps referencing this HouseItem
+		//set the type of effect (also ensures referencing of the correct instance of HouseItem)
 		foreach (var myStep in CompletionSteps.Where(step => step.HouseItemRequired == this.houseItem.HouseItemOf))
 		{
 			switch (this.houseItem.HouseItemOf)
@@ -41,10 +45,14 @@ public class Completer : MonoBehaviour
 			case HouseItemType.LivingroomFirePoker:
 			case HouseItemType.Cryptex1Livingroom:
 			case HouseItemType.Cryptex2Hallway:
+			case HouseItemType.Cryptex3Masterbed:
+			case HouseItemType.MasterbedMirrorShard:
+			case HouseItemType.Cryptex4MirrorShard:
 				myStep.ActionOnCompletion = this.houseItem.Fade;
 				break;
 			case HouseItemType.LivingroomPaintingSisters:
-				myStep.ActionOnCompletion = paintingSisters;
+			case HouseItemType.FoyerMirror:
+				myStep.ActionOnCompletion = fadeInChildren;
 				break;
 			case HouseItemType.MasterbedPillow1:
 				myStep.ActionOnCompletion = pillowPickup;
@@ -89,9 +97,9 @@ public class Completer : MonoBehaviour
 			State.Instance.NewItemTransform.Add(this.houseItem.HouseItemOf, newTransform);
 	}
 
-	private void paintingSisters(int arg)
+	private void fadeInChildren(int fadeDirection)
 	{
-		this.houseItem.Fade(0); //hide the rotated painting
+		this.houseItem.Fade(fadeDirection); //hide the rotated painting
 
 		//Show the children, CryptexPiece1 and the straightened painting
 		FadeInChildren(this.transform);

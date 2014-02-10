@@ -73,7 +73,14 @@ public partial class TextLibrary
 			"I can see my reflection in this shard of glass."});
 
 		//Completion.HaveMirrorShard
+		TextHouseItem.Add(Tuple.Create(HouseItemType.FoyerMirror, Completion.HaveMirrorShard), new List<string>{
+			"This little shard sure covers up the cracks."});
 
+		//Completion.MirrorShardUsed
+		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex4MirrorShard, Completion.MirrorShardUsed), new List<string>{
+			"Who would of thought, a mirror that was rigged to drop one of those gold discs as soon as it was fixed. I can only imagine what magic just picking up this disc has caused."});
+		
+		//Completion.CyrptexPieces4
 
 //		TextHouseItem.Add(Tuple.Create(HouseItemType.AtticBoxes, Completion.None), new List<string>{
 //			"These are filled with Liz’s old stuff…"});
@@ -115,5 +122,7 @@ Strange to have an unfinished inscription on the urn though. All it says is, ""Y
 			@"More things are sure to fall from the ceiling just by stepping in my old bedroom."});
 		TextRoom.Add(Tuple.Create(Room.Hallway, Completion.CryptexPieces2), new List<string>{
 			@"...or new doors unlock."});
+		TextRoom.Add(Tuple.Create(Room.Hallway, Completion.CyrptexPieces4), new List<string>{
+			@"Those stairs must go up to the attic."});
 	}
 }

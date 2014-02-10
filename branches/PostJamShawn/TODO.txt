@@ -1,4 +1,4 @@
-Have pillow1 move to pillow2
+Use cryptex prefab for more than just cryptex4
 pickup cryptex3
 
 Polish:
