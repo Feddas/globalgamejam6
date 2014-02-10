@@ -42,6 +42,10 @@ public class GirlLocation
 
 		addSpawnLocation(Room.Hallway, Room.Masterbed, -6.9f, -3f);
 		addSpawnLocation(Room.Masterbed, Room.Hallway, 6.9f, -2f);
+
+		//Opened up after Completed.CryptexPieces4
+		addSpawnLocation(Room.Hallway, Room.Attic, -1f, -3f);
+		addSpawnLocation(Room.Attic, Room.Hallway, 4f, -2.5f);
 	}
 
 	public void SetPosition()
