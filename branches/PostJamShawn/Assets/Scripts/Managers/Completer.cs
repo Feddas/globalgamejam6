@@ -16,16 +16,29 @@ public class Completer : MonoBehaviour
 		new CompletionStep(Completion.HallwayFloorBoard, HouseItemType.Cryptex2Hallway, -1),
 		new CompletionStep(Completion.CryptexPieces2, HouseItemType.MasterbedPillow1, 0),
 		new CompletionStep(Completion.PillowsPlaced, HouseItemType.Cryptex3Masterbed, -1),
-		new CompletionStep(Completion.CyrptexPieces3, HouseItemType.MasterbedMirrorShard, -1),
+		new CompletionStep(Completion.CryptexPieces3, HouseItemType.MasterbedMirrorShard, -1),
 		new CompletionStep(Completion.HaveMirrorShard, HouseItemType.FoyerMirror, 1),
 		new CompletionStep(Completion.MirrorShardUsed, HouseItemType.Cryptex4MirrorShard, -1),
+		new CompletionStep(Completion.CryptexPieces4, HouseItemType.AtticRockingHorse, 1),
+		new CompletionStep(Completion.BunnyFell, HouseItemType.Cryptex5Attic, -1),
 	};
 
 	void Awake()
 	{
+		//toggle-able debug code below
+//		if (State.Instance.Completed < Completion.CryptexPieces4)
+//			State.Instance.Completed = Completion.CryptexPieces4;
+
 		this.houseItem = this.GetComponent<HouseItem>();
 
 		setInteractionEffects();
+		
+		//complete on awake  //TODO: handle Cryptex2 this way instead of in DoorTaken.cs
+		if (this.houseItem.HouseItemOf == HouseItemType.AtticBunny
+			&& State.Instance.Completed == Completion.StoppedRockingHorse)
+		{
+			this.GetComponent<Animator>().SetTrigger("MakeBunnyFall");
+		}
 	}
 	
 	void Start() { }
@@ -48,6 +61,7 @@ public class Completer : MonoBehaviour
 			case HouseItemType.Cryptex3Masterbed:
 			case HouseItemType.MasterbedMirrorShard:
 			case HouseItemType.Cryptex4MirrorShard:
+			case HouseItemType.Cryptex5Attic:
 				myStep.ActionOnCompletion = this.houseItem.Fade;
 				break;
 			case HouseItemType.LivingroomPaintingSisters:
@@ -56,6 +70,9 @@ public class Completer : MonoBehaviour
 				break;
 			case HouseItemType.MasterbedPillow1:
 				myStep.ActionOnCompletion = pillowPickup;
+				break;
+			case HouseItemType.AtticRockingHorse:
+				myStep.ActionOnCompletion = killAnimator;
 				break;
 			default:
 				throw new UnityException("Completer.cs/setInteractionEffects() does not have a case for " + this.houseItem.HouseItemOf);
@@ -71,12 +88,22 @@ public class Completer : MonoBehaviour
 			if (State.Instance.Completed == completionStep.StepToStart
 			    && houseItem.HouseItemOf == completionStep.HouseItemRequired)
 			{
-				State.Instance.Completed++; //step fulfilled, increment to next step
-				completionStep.ActionOnCompletion(completionStep.ActionArgument);
+				completeStep(completionStep);
 				CompletionSteps.Remove(completionStep);
 				return;
 			}
 		}
+	}
+
+	private void completeStep(CompletionStep completionStep)
+	{
+		completeStep(completionStep.ActionOnCompletion, completionStep.ActionArgument);
+	}
+
+	private void completeStep(CompletionStep.Action action, int actionArg)
+	{
+		State.Instance.Completed++; //step fulfilled, increment to next step
+		action(actionArg);
 	}
 
 	#region completer effects
@@ -84,17 +111,58 @@ public class Completer : MonoBehaviour
 	{
 		this.GetComponent<Animator>().SetTrigger("PillowPickup");
 
-		//save end transform after animation for room re-entry. http://answers.unity3d.com/questions/454523/component-without-gameobject.html
-		var objectForTransform = new GameObject() { name = "Position" + this.houseItem.HouseItemOf };
-		DontDestroyOnLoad(objectForTransform);
-		Transform newTransform = objectForTransform.transform;
+		//The pillow hasn't reached it's final position yet, it's manually put in here. This could be refactored to be called from the dopesheet after the animation is done. just need to find out if it still happens if they leave the room before the animation is complete.
+		Transform newTransform = new GameObject().transform;
 		newTransform.position = new Vector3(8f, -1f, 0f);
 		newTransform.localScale = new Vector3(-1f, 1f, 1f);
+		newTransform = newPersistantTransform(newTransform, this.houseItem.HouseItemOf);
 
 		if (State.Instance.NewItemTransform.ContainsKey(this.houseItem.HouseItemOf)) //overwrite it
 			State.Instance.NewItemTransform[this.houseItem.HouseItemOf] = newTransform;
 		else
 			State.Instance.NewItemTransform.Add(this.houseItem.HouseItemOf, newTransform);
+	}
+
+	/// <summary> This is called from the Bunny Animation DopeSheet in the Unity Editor </summary>
+	private void BunnyFall()
+	{
+		completeStep(killAnimator, 1);
+	}
+
+	/// <summary>
+	/// Sets the animator component on this houseItem to be destroyed.
+	/// </summary>
+	/// <param name="arg">if set to 1, Animator is destroyed immediately, rather than on scene reload.</param>
+	private void killAnimator(int arg)
+	{
+		if (arg == 1)
+		{
+			//Animator locks the postion even when "Apply Root Motion" is unchecked
+			Destroy(this.GetComponent<Animator>());
+		}
+
+		//Save final Position
+		Transform finalPosition = newPersistantTransform(this.transform, this.houseItem.HouseItemOf);
+		if (State.Instance.NewItemTransform.ContainsKey(this.houseItem.HouseItemOf)) //overwrite it
+			State.Instance.NewItemTransform[this.houseItem.HouseItemOf] = finalPosition;
+		else
+			State.Instance.NewItemTransform.Add(this.houseItem.HouseItemOf, finalPosition);
+	}
+
+	/// <summary>
+	/// save transform after animation for room re-entry. http://answers.unity3d.com/questions/454523/component-without-gameobject.html
+	/// </summary>
+	/// <returns>The persistant transform.</returns>
+	/// <param name="basedOffOf">Based off of.</param>
+	/// <param name="itemType">Item type.</param>
+	private Transform newPersistantTransform(Transform basedOffOf, HouseItemType itemType)
+	{
+		var objectForTransform = new GameObject() { name = "Position" + itemType };
+		DontDestroyOnLoad(objectForTransform); //make transform persist accross scenes
+		objectForTransform.transform.position = basedOffOf.position;
+		objectForTransform.transform.rotation = basedOffOf.rotation;
+		objectForTransform.transform.localScale = basedOffOf.localScale;
+		return objectForTransform.transform;
 	}
 
 	private void fadeInChildren(int fadeDirection)
