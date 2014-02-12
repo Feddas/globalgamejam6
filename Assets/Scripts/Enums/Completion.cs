@@ -14,16 +14,17 @@ public enum Completion
 	CryptexPieces2, //unlock masterbed
 
 	PillowsPlaced,
-	CyrptexPieces3,
+	CryptexPieces3,
 	
 	HaveMirrorShard,
 	MirrorShardUsed,
-	CyrptexPieces4, //unlock attic
+	CryptexPieces4, //unlock attic
 
-	MovedRockingHorse,
+	StoppedRockingHorse,
+	BunnyFell,
 	CryptexPieces5, //unlock cryptex game
 
-	HaveCryptex,
-	CryptexPhotoViewed,
+	CryptexPiecesPutIn,
+	CodexPhotoViewed,
 }
 //TODO: rename CryptexPieces1 to HouseItemType names; ie Cryptes1LivingRoom

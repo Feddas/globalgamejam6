@@ -67,7 +67,7 @@ public class HouseItem : MonoBehaviour
 			Destroy(this.GetComponent<Animator>());
 
 			this.gameObject.transform.position = newTransform.position;
-			//this.transform.rotation = newTransform.rotation; //not needed yet, not tested
+			this.transform.rotation = newTransform.rotation; //not needed yet, not tested
 			this.gameObject.transform.localScale = newTransform.localScale;
 		}
 	}

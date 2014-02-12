@@ -44,7 +44,7 @@ public partial class TextLibrary
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomFirePoker, Completion.FixedPainting), new List<string>{ //Firepoker is now gone
 			"I'm no Cinderella, I am not cleaning that fireplace out."});
 		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex1Livingroom, Completion.FixedPainting), new List<string>{
-			"This is an odd looking disc. It has the letters A through Z around its edge."});
+			"This is an odd looking disc. It looks like it would fit in the puzzle box over the fireplace."});
 
 		//Completion.CryptexPieces1
 		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingSisters, Completion.CryptexPieces1), new List<string>{
@@ -68,8 +68,8 @@ public partial class TextLibrary
 		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex3Masterbed, Completion.PillowsPlaced), new List<string>{
 			"That's 3 of 'em. I'm getting the feeling Dad wanted me to find these."});
 
-		//Completion.CyptexPieces3
-		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedMirrorShard, Completion.CyrptexPieces3), new List<string>{
+		//Completion.CryptexPieces3
+		TextHouseItem.Add(Tuple.Create(HouseItemType.MasterbedMirrorShard, Completion.CryptexPieces3), new List<string>{
 			"I can see my reflection in this shard of glass."});
 
 		//Completion.HaveMirrorShard
@@ -80,33 +80,20 @@ public partial class TextLibrary
 		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex4MirrorShard, Completion.MirrorShardUsed), new List<string>{
 			"Who would of thought, a mirror that was rigged to drop one of those gold discs as soon as it was fixed. I can only imagine what magic just picking up this disc has caused."});
 		
-		//Completion.CyrptexPieces4
+		//Completion.CryptexPieces4
+		TextHouseItem.Add(Tuple.Create(HouseItemType.AtticRockingHorse, Completion.CryptexPieces4), new List<string>{
+			"Guess it just needed a touch of reality to stop moving."});
+
+		//Completion.CryptexPieces4
+		TextHouseItem.Add(Tuple.Create(HouseItemType.Cryptex5Attic, Completion.BunnyFell), new List<string>{
+			"I have quite a few of these discs now. Might be time to figure out what to do with them."});
 
 //		TextHouseItem.Add(Tuple.Create(HouseItemType.AtticBoxes, Completion.None), new List<string>{
 //			"These are filled with Liz’s old stuff…"});
 //		TextHouseItem.Add(Tuple.Create(HouseItemType.AtticRockingHorse, Completion.None), new List<string>{
 //			"The attic used to be empty. This must be where Dad put all of the old things after Mom died."});
-//		TextHouseItem.Add(Tuple.Create(HouseItemType.BedroomBed, Completion.None), new List<string>{
-//			"My old bed… it’s just as I left it. I think I’ll lay down for a moment…"});
-//		TextHouseItem.Add(Tuple.Create(HouseItemType.BedroomPainting, Completion.None), new List<string>{//Poster
-//			"I can’t believe I listened to them…"});
-//		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomCodex, Completion.None), new List<string>{//without all pieces
-//			"This looks like it would fit in the puzzle box. I guess these things are just lying about. I wonder how many more there are."});
-//
 //		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingFireplace, Completion.None), new List<string>{
 //			"I don’t remember this being here… it looks like there’s a note tucked behind the canvas."});
-//		TextHouseItem.Add(Tuple.Create(HouseItemType.LivingroomPaintingsCreepy, Completion.None), new List<string>{
-//			"The original home owners. Mom said these paintings had charm, but I always felt like they were staring at me."});
-//
-//		TextHouseItem.Add(Tuple.Create(HouseItemType.FoyerMirror, Completion.None), new List<string>{//without mirror shard
-//			"The mirror...",
-//			"I remember..."});
-//		TextHouseItem.Add(Tuple.Create(HouseItemType.DoorAttic, Completion.None), new List<string>{//without FirePoker
-//			"None of us were ever able to open the attic once the chord broke. We always used something to reach up there…"});
-//		TextHouseItem.Add(Tuple.Create(HouseItemType.HallDoorLockedBathroom, Completion.None), new List<string>{
-//			"It's just the bathroom."});
-//		TextHouseItem.Add(Tuple.Create(HouseItemType.HallFloorboard, Completion.None), new List<string>{
-//			"Wasn’t Dad supposed to fix this? It looks loose…"});
 	}
 	
 	private void loadTextRoom()
@@ -122,7 +109,10 @@ Strange to have an unfinished inscription on the urn though. All it says is, ""Y
 			@"More things are sure to fall from the ceiling just by stepping in my old bedroom."});
 		TextRoom.Add(Tuple.Create(Room.Hallway, Completion.CryptexPieces2), new List<string>{
 			@"...or new doors unlock."});
-		TextRoom.Add(Tuple.Create(Room.Hallway, Completion.CyrptexPieces4), new List<string>{
+		TextRoom.Add(Tuple.Create(Room.Hallway, Completion.CryptexPieces4), new List<string>{
 			@"Those stairs must go up to the attic."});
+		
+		TextRoom.Add(Tuple.Create(Room.Attic, Completion.CryptexPieces4), new List<string>{
+			@"Umm...That would be a rocking horse all right. Have I mentioned how this place is increasingly creepy? I hope the last disc is up here."});
 	}
 }

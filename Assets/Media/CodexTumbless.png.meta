@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b150cb6118367ea42aba7ef441f13fc3
+guid: e33a64374cd1c9c4190daa812861bbbb
 TextureImporter:
   serializedVersion: 2
   mipmaps:
@@ -24,16 +24,16 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: 1
+    aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
+  alignment: 0
   spritePivot: {x: .5, y: .5}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
@@ -44,15 +44,6 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 50
   spriteSheet:
-    sprites:
-    - name: AtticRockingHorse
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 14
-        width: 506
-        height: 477
-      alignment: 9
-      pivot: {x: .38651213, y: .0626015142}
+    sprites: []
   spritePackingTag: 
   userData: 

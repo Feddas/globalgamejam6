@@ -61,8 +61,8 @@ TextureImporter:
         y: 334
         width: 194
         height: 216
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .681471705, y: .0402939394}
     - name: CryptexPiece
       rect:
         serializedVersion: 2
