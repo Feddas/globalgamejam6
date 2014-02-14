@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 400000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: TitleAtlas
+  m_Name: AtlasCryptex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,23 +38,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f514313262e3d141ad017b60809752a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: ae7d95e30933b2643b616de036466ae4, type: 2}
+  material: {fileID: 2100000, guid: 3171669b5ebda054687bdbf5753f733c, type: 2}
   items:
-  - name: Title
+  - name: CodexTumblers
     region:
       serializedVersion: 2
       x: 0
-      y: 0
-      width: .99609375
-      height: .9765625
+      y: .564453125
+      width: .174804688
+      height: .103027344
     border:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
     rotated: 0
-    sizeInPixels: {x: 1020, y: 500}
-    textureGUID: 8e84e9cf6e74c724080677b1e4407c2b
+    sizeInPixels: {x: 358, y: 211}
+    textureGUID: 3d85edae24d8eb34db02ccedbb79501c
+    deleted: 0
+    texture: {fileID: 0}
+  - name: CodexTumbless
+    region:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: .5
+      height: .28125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 1024, y: 576}
+    textureGUID: e33a64374cd1c9c4190daa812861bbbb
+    deleted: 0
+    texture: {fileID: 0}
+  - name: CodexUnlocked
+    region:
+      serializedVersion: 2
+      x: 0
+      y: .282226562
+      width: .5
+      height: .28125
+    border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    rotated: 0
+    sizeInPixels: {x: 1024, y: 576}
+    textureGUID: f77773c4f68e51d448592cc66b03eb7d
     deleted: 0
     texture: {fileID: 0}
   generator: 0
