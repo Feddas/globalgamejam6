@@ -21,13 +21,14 @@ public class Completer : MonoBehaviour
 		new CompletionStep(Completion.MirrorShardUsed, HouseItemType.Cryptex4MirrorShard, -1),
 		new CompletionStep(Completion.CryptexPieces4, HouseItemType.AtticRockingHorse, 1),
 		new CompletionStep(Completion.BunnyFell, HouseItemType.Cryptex5Attic, -1),
+		new CompletionStep(Completion.CryptexPieces5, HouseItemType.LivingroomCodex, 7),
 	};
 
 	void Awake()
 	{
 		//toggle-able debug code below
-//		if (State.Instance.Completed < Completion.CryptexPieces4)
-//			State.Instance.Completed = Completion.CryptexPieces4;
+//		if (State.Instance.Completed < Completion.CryptexPieces5)
+//			State.Instance.Completed = Completion.CryptexPieces5;
 
 		this.houseItem = this.GetComponent<HouseItem>();
 
@@ -73,6 +74,9 @@ public class Completer : MonoBehaviour
 				break;
 			case HouseItemType.AtticRockingHorse:
 				myStep.ActionOnCompletion = killAnimator;
+				break;
+			case HouseItemType.LivingroomCodex:
+				myStep.ActionOnCompletion = loadScene;
 				break;
 			default:
 				throw new UnityException("Completer.cs/setInteractionEffects() does not have a case for " + this.houseItem.HouseItemOf);
@@ -147,6 +151,11 @@ public class Completer : MonoBehaviour
 			State.Instance.NewItemTransform[this.houseItem.HouseItemOf] = finalPosition;
 		else
 			State.Instance.NewItemTransform.Add(this.houseItem.HouseItemOf, finalPosition);
+	}
+
+	private void loadScene(int buildIndex)
+	{
+		Application.LoadLevel(buildIndex);
 	}
 
 	/// <summary>

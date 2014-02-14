@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Masterbed.unity
   - enabled: 1
     path: Assets/Scenes/Attic.unity
+  - enabled: 1
+    path: Assets/Scenes/Cryptex.unity
