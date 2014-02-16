@@ -8,23 +8,22 @@ public enum Completion
 	PlacedUrn,
 	HaveFirePoker,
 	FixedPainting,
-	CryptexPieces1, //unlock upstairs hallway and bedroom
+	Cryptex1Livingroom, //unlock upstairs hallway and bedroom
 	
 	HallwayFloorBoard,
-	CryptexPieces2, //unlock masterbed
+	Cryptex2Hallway, //unlock masterbed
 
 	PillowsPlaced,
-	CryptexPieces3,
+	Cryptex3Masterbed,
 	
 	HaveMirrorShard,
 	MirrorShardUsed,
-	CryptexPieces4, //unlock attic
+	Cryptex4MirrorShard, //unlock attic
 
 	StoppedRockingHorse,
 	BunnyFell,
-	CryptexPieces5, //unlock cryptex game
+	Cryptex5Attic, //unlock cryptex game
 
 	CryptexPiecesPutIn,
 	CodexPhotoViewed,
 }
-//TODO: rename CryptexPieces1 to HouseItemType names; ie Cryptes1LivingRoom

@@ -21,6 +21,10 @@ public class StartMenu : MonoBehaviour
 	{
 		if (control.name == "Start")
 		{
+			#if UNITY_WEBPLAYER
+			kongregate();
+			#endif //UNITY_WEBPLAYER
+
 			State.Instance.Completed = Completion.Start;
 			FrontDoor.SetActive(true);
 			var startMenu = this.GetComponent<dfPanel>();
@@ -36,4 +40,31 @@ public class StartMenu : MonoBehaviour
 			Application.Quit();
 		}
 	}
+
+	#if UNITY_WEBPLAYER
+	/// <summary>
+	/// Copied from http://www.kongregate.com/developer_center/docs/en/using-the-api-with-unity3d
+	/// with some help from https://www.youtube.com/watch?v=FW4QRsJx7Wg
+	/// </summary>
+	private void kongregate()
+	{
+		if (string.IsNullOrEmpty(State.Instance.KongregateUserInfo))
+		{
+			// Begin the API loading process if it is available
+			Application.ExternalEval(
+				"if(typeof(kongregateUnitySupport) != 'undefined'){" +
+				" kongregateUnitySupport.initAPI('" + this.name + "', 'OnKongregateAPILoaded');" +
+				"};"
+			);
+		}
+	}
+
+	private void OnKongregateAPILoaded(string userInfoString)
+	{
+		// We now know we're on Kongregate
+		//isKongregate = true;
+
+		State.Instance.KongregateUserInfo = userInfoString;
+	}
+	#endif //UNITY_WEBPLAYER
 }

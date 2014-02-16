@@ -12,6 +12,8 @@ public class State
 	/// <summary> How much of the game the girl has completed so far. Used for keying text and item inventory </summary>
 	public Completion Completed { get; set; }
 
+	public string KongregateUserInfo { get; set; }
+
 	#region display game dialog
 	public dfControl GameDialog { get; set; }
 
