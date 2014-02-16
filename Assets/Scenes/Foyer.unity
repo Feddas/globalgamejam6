@@ -216,7 +216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 770ba0e9c3f7a754e9fb9b17933dfc48, type: 2}
       propertyPath: m_Name
-      value: CryptexPiece4
+      value: Cryptex4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 770ba0e9c3f7a754e9fb9b17933dfc48, type: 2}
       propertyPath: m_LocalScale.x
@@ -225,6 +225,10 @@ Prefab:
     - target: {fileID: 400000, guid: 770ba0e9c3f7a754e9fb9b17933dfc48, type: 2}
       propertyPath: m_LocalScale.y
       value: .480769247
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 770ba0e9c3f7a754e9fb9b17933dfc48, type: 2}
+      propertyPath: HouseItemOf
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 770ba0e9c3f7a754e9fb9b17933dfc48, type: 2}
@@ -1321,7 +1325,7 @@ GameObject:
   - 61: {fileID: 1333109888}
   - 114: {fileID: 1333109887}
   m_Layer: 0
-  m_Name: CryptexPiece4
+  m_Name: Cryptex4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1363,7 +1367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseItemOf: 49
+  HouseItemOf: 6
 --- !u!212 &1333109890
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1452,7 +1456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseItemOf: 26
+  HouseItemOf: 9
 --- !u!212 &1348813726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1637,7 +1641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66506124a6254fe44899f2f5657b5d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HouseItemOf: 24
+  HouseItemOf: 8
 --- !u!1 &1700833757
 GameObject:
   m_ObjectHideFlags: 0

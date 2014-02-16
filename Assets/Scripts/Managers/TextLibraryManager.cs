@@ -71,13 +71,10 @@ public partial class TextLibrary
 		//use random value
 		switch (targetItem)
 		{
-		case HouseItemType.AtticBoxes:
-			itemState = Random.Range(0, 2);
-			break;
 		case HouseItemType.LockedDoor:
 			itemState = Random.Range(0,3);
 			break;
-		default: break;
+		default: break; //use default value of 0
 		}
 		
 		//check progress of item dialog to determine which itemState string to use

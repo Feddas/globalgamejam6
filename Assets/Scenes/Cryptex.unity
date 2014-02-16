@@ -1936,8 +1936,8 @@ MonoBehaviour:
   autoSize: 0
   autoHeight: 0
   wordWrap: 1
-  text: There must be some reason dad had this box up here on the mantle. Right next
-    to where he wanted his urn, engraved with "You are" placed.
+  text: There must be some reason dad had this box up here on the mantle. It's right
+    next to where he wanted me to place his urn engraved with "You are".
   bottomColor:
     serializedVersion: 2
     rgba: 4294967295
@@ -2900,8 +2900,8 @@ MonoBehaviour:
   wordWrap: 1
   text: "Made for global game jam 2014\n\"We don't see things as they are, we see
     them as we are.\"\nShawn Featherly\r - This PostJam version, Programming, Animation\n\rLogan
-    Knecht\r\r - Programming\nSean MacBean\r\r - Art & Character Animation\nDan Marseglia\r
-    - Background art\nDan Yun - Audio & Music"
+    Knecht\r\r - Programming\nSean MacBean\r\r - Art, Character Animation, & Trailer\nDan
+    Marseglia\r - Background art\nDan Yun - Audio & Music"
   bottomColor:
     serializedVersion: 2
     rgba: 4294967295

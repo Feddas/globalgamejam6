@@ -1,5 +1,3 @@
-Use cryptex prefab for more than just cryptex4
-pickup cryptex3
 
 Polish:
 Drop animation to codex disc?

@@ -14,14 +14,14 @@ public class Completer : MonoBehaviour
 		new CompletionStep(Completion.HaveFirePoker, HouseItemType.LivingroomPaintingSisters, -1),
 		new CompletionStep(Completion.FixedPainting, HouseItemType.Cryptex1Livingroom, -1),
 		new CompletionStep(Completion.HallwayFloorBoard, HouseItemType.Cryptex2Hallway, -1),
-		new CompletionStep(Completion.CryptexPieces2, HouseItemType.MasterbedPillow1, 0),
+		new CompletionStep(Completion.Cryptex2Hallway, HouseItemType.MasterbedPillow1, 0),
 		new CompletionStep(Completion.PillowsPlaced, HouseItemType.Cryptex3Masterbed, -1),
-		new CompletionStep(Completion.CryptexPieces3, HouseItemType.MasterbedMirrorShard, -1),
+		new CompletionStep(Completion.Cryptex3Masterbed, HouseItemType.MasterbedMirrorShard, -1),
 		new CompletionStep(Completion.HaveMirrorShard, HouseItemType.FoyerMirror, 1),
 		new CompletionStep(Completion.MirrorShardUsed, HouseItemType.Cryptex4MirrorShard, -1),
-		new CompletionStep(Completion.CryptexPieces4, HouseItemType.AtticRockingHorse, 1),
+		new CompletionStep(Completion.Cryptex4MirrorShard, HouseItemType.AtticRockingHorse, 1),
 		new CompletionStep(Completion.BunnyFell, HouseItemType.Cryptex5Attic, -1),
-		new CompletionStep(Completion.CryptexPieces5, HouseItemType.LivingroomCodex, 7),
+		new CompletionStep(Completion.Cryptex5Attic, HouseItemType.LivingroomCodexBox, 7),
 	};
 
 	void Awake()
@@ -34,8 +34,13 @@ public class Completer : MonoBehaviour
 
 		setInteractionEffects();
 		
-		//complete on awake  //TODO: handle Cryptex2 this way instead of in DoorTaken.cs
-		if (this.houseItem.HouseItemOf == HouseItemType.AtticBunny
+		//complete on scene change
+		if (this.houseItem.HouseItemOf == HouseItemType.Cryptex2Hallway
+			&& State.Instance.Completed == Completion.HallwayFloorBoard)
+		{
+			this.houseItem.Fade(1);
+		}
+		else if (this.houseItem.HouseItemOf == HouseItemType.AtticBunny
 			&& State.Instance.Completed == Completion.StoppedRockingHorse)
 		{
 			this.GetComponent<Animator>().SetTrigger("MakeBunnyFall");
@@ -75,7 +80,7 @@ public class Completer : MonoBehaviour
 			case HouseItemType.AtticRockingHorse:
 				myStep.ActionOnCompletion = killAnimator;
 				break;
-			case HouseItemType.LivingroomCodex:
+			case HouseItemType.LivingroomCodexBox:
 				myStep.ActionOnCompletion = loadScene;
 				break;
 			default:

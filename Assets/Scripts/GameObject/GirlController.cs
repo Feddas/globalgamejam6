@@ -35,7 +35,7 @@ public class GirlController : MonoBehaviour
 		{
 			Application.Quit();
 		}
-		#endif
+		#endif //UNITY_ANDROID
 	}
 	
 	/// <summary> Pulled from Unity2D 4.3 potato vs aliens demo </summary>
