@@ -25,5 +25,7 @@ public enum Completion
 	Cryptex5Attic, //unlock cryptex game
 
 	CryptexPiecesPutIn,
+
+	/// <summary> Reaching this step means the player won </summary>
 	CodexPhotoViewed,
 }
