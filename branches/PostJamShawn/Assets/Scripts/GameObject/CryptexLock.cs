@@ -25,6 +25,7 @@ public class CryptexLock : MonoBehaviour
 			//prevent win being called multiple times
 			selectedIndices = new int[5];
 
+			State.Instance.Completed = Completion.CodexPhotoViewed;
 			win();
 		}
 	}
@@ -58,14 +59,8 @@ public class CryptexLock : MonoBehaviour
 		if (string.IsNullOrEmpty(State.Instance.KongregateUserInfo))
 			return;
 
-//		var kongregateParams = State.Instance.KongregateUserInfo.Split('|');
-//		int userId;
-//		int.TryParse(kongregateParams[0], out userId);
-//		string username = kongregateParams[1];
-//		string gameAuthToken = kongregateParams[2];
-
-		// Begin the API loading process if it is available
-		Application.ExternalCall("kongregate.stats.submit","GameComplete",100);
+		int seconds = (int)(new System.TimeSpan(System.DateTime.Now.Ticks - State.Instance.StartTime)).TotalSeconds;
+		Application.ExternalCall("kongregate.stats.submit", "CompletedInSeconds", seconds);
 	}
 	#endif //UNITY_WEBPLAYER
 }

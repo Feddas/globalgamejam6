@@ -21,6 +21,8 @@ public class StartMenu : MonoBehaviour
 	{
 		if (control.name == "Start")
 		{
+			State.Instance.StartTime = System.DateTime.Now.Ticks;
+
 			#if UNITY_WEBPLAYER
 			kongregate();
 			#endif //UNITY_WEBPLAYER
@@ -65,6 +67,7 @@ public class StartMenu : MonoBehaviour
 		//isKongregate = true;
 
 		State.Instance.KongregateUserInfo = userInfoString;
+		Application.ExternalCall("kongregate.stats.submit", "Loaded", 1);
 	}
 	#endif //UNITY_WEBPLAYER
 }

@@ -10,9 +10,24 @@ public class State
 	public HouseItemType ItemToInteract;
 
 	/// <summary> How much of the game the girl has completed so far. Used for keying text and item inventory </summary>
-	public Completion Completed { get; set; }
+	public Completion Completed
+	{
+		get { return completed; }
+		set
+		{
+			if (value == completed)
+				return;
+
+			completed = value;
+			onCompletedChanged();
+		}
+	}
+	private Completion completed;
 
 	public string KongregateUserInfo { get; set; }
+
+	/// <summary> the time when the player hit the start button, in Ticks
+	public long StartTime { get; set; }
 
 	#region display game dialog
 	public dfControl GameDialog { get; set; }
@@ -66,6 +81,15 @@ public class State
 			itemInteractions[targetItem] = 0;
 	}
 	#endregion item state
+
+	private void onCompletedChanged()
+	{
+		if (string.IsNullOrEmpty(State.Instance.KongregateUserInfo) == false)
+		{
+			int progress = (100 * (int)completed) / CompletionStep.TotalSteps;
+			Application.ExternalCall("kongregate.stats.submit", "GameComplete", progress);
+		}
+	}
 
 	#region singleton
 	private static volatile State _instance;
